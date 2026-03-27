@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bqj7gu4ciw5wl"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_g4x4o"]
+[ext_resource type="Script" uid="uid://cnk203fqo6di7" path="res://Scripts/EditableLabeledEntry/EditableLabeledEntry.cs" id="2_qd7si"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="3_45fvn"]
+[ext_resource type="Texture2D" uid="uid://bqoqpfyk0oknj" path="res://Assets/expanded_white1x.png" id="4_k3dfq"]
+[ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="5_dyqc3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30e8d"]
+atlas = ExtResource("3_45fvn")
+region = Rect2(450, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lan6a"]
+atlas = ExtResource("4_k3dfq")
+region = Rect2(0, 450, 50, 50)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g4x4o"]
+load_path = "res://.godot/imported/sheet_white1x.png-59a1a5b3fcf97feee46d3c8fb641fc2c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd7si"]
+atlas = SubResource("CompressedTexture2D_g4x4o")
+region = Rect2(100, 250, 50, 50)
+
+[node name="EditableLabeledEntry" type="Control" unique_id=1258508914 node_paths=PackedStringArray("EditorContainer", "Editor", "Label", "ConfirmButton", "EditButton", "DeleteButton")]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_g4x4o")
+script = ExtResource("2_qd7si")
+EditorContainer = NodePath("Panel/MarginContainer/HBoxContainer/MarginContainer")
+Editor = NodePath("Panel/MarginContainer/HBoxContainer/MarginContainer/LineEdit")
+Label = NodePath("Panel/MarginContainer/HBoxContainer/NameLabel")
+ConfirmButton = NodePath("Panel/MarginContainer/HBoxContainer/SaveButton")
+EditButton = NodePath("Panel/MarginContainer/HBoxContainer/EditButton")
+DeleteButton = NodePath("Panel/MarginContainer/HBoxContainer/DeleteButton")
+
+[node name="Panel" type="Panel" parent="." unique_id=314108675]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=2102909546]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=1971834047]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=1168953151]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/margin_left = 4
+
+[node name="LineEdit" type="LineEdit" parent="Panel/MarginContainer/HBoxContainer/MarginContainer" unique_id=1148053926]
+layout_mode = 2
+size_flags_vertical = 4
+text = "dasd"
+placeholder_text = "Name"
+
+[node name="NameLabel" type="Label" parent="Panel/MarginContainer/HBoxContainer" unique_id=778085802]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="SaveButton" type="Button" parent="Panel/MarginContainer/HBoxContainer" unique_id=1518555527]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+icon = SubResource("AtlasTexture_30e8d")
+
+[node name="EditButton" type="Button" parent="Panel/MarginContainer/HBoxContainer" unique_id=373005917]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+icon = SubResource("AtlasTexture_lan6a")
+
+[node name="DeleteButton" parent="Panel/MarginContainer/HBoxContainer" unique_id=2086522454 node_paths=PackedStringArray("Parent") instance=ExtResource("5_dyqc3")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+icon = SubResource("AtlasTexture_qd7si")
+Parent = NodePath("../../../..")

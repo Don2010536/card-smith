@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://5t7ty8p3xf2t"]
+
+[ext_resource type="Script" uid="uid://tycofxwl76b1" path="res://Scripts/DialogNodes/ResponseVBoxContainer.cs" id="1_xshdt"]
+[ext_resource type="PackedScene" uid="uid://dpxqsx1ndqan2" path="res://Prefabs/response_condition_control.tscn" id="2_f5udr"]
+[ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="3_8h7yn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vjeat"]
+load_path = "res://.godot/imported/sheet_white1x.png-59a1a5b3fcf97feee46d3c8fb641fc2c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhcxs"]
+atlas = SubResource("CompressedTexture2D_vjeat")
+region = Rect2(100, 250, 50, 50)
+
+[node name="ResponseVBoxContainer" type="VBoxContainer" unique_id=1092084715 node_paths=PackedStringArray("ResponseEdit", "AddResponseConditionButton", "LogicalSelector", "ResponseConditionVBox")]
+theme_override_constants/separation = 8
+script = ExtResource("1_xshdt")
+ResponseConditionScene = ExtResource("2_f5udr")
+ResponseEdit = NodePath("HBoxContainer/LineEdit")
+AddResponseConditionButton = NodePath("AddReqButton")
+LogicalSelector = NodePath("ConditionalButton")
+ResponseConditionVBox = NodePath("ResponseConditionVBoxContainer")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=443893695]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer" unique_id=940706229]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Response"
+
+[node name="DeleteButton" parent="HBoxContainer" unique_id=2086522454 node_paths=PackedStringArray("Parent") instance=ExtResource("3_8h7yn")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_yhcxs")
+Parent = NodePath("../..")
+
+[node name="AddReqButton" type="Button" parent="." unique_id=1569565425]
+layout_mode = 2
+text = "Add Requirement"
+
+[node name="ConditionalButton" type="OptionButton" parent="." unique_id=691995890]
+visible = false
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "And"
+popup/item_0/id = 0
+popup/item_1/text = "Or"
+popup/item_1/id = 1
+
+[node name="ResponseConditionVBoxContainer" type="VBoxContainer" parent="." unique_id=2068233559]
+layout_mode = 2
+theme_override_constants/separation = 16

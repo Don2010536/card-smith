@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://jmvdpt871dne"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_e2tus"]
+[ext_resource type="Script" uid="uid://b48prdxcn2os5" path="res://Scripts/BucketList/BucketList.cs" id="2_w68hj"]
+[ext_resource type="PackedScene" uid="uid://bqj7gu4ciw5wl" path="res://Prefabs/editable_labeled_entry.tscn" id="3_6g4sj"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="4_xp8pr"]
+[ext_resource type="Texture2D" uid="uid://bqoqpfyk0oknj" path="res://Assets/expanded_white1x.png" id="5_am2i3"]
+[ext_resource type="Script" uid="uid://yp2coqk8vfev" path="res://Scripts/BucketList/CreateBucketButton.cs" id="6_tn2bt"]
+[ext_resource type="PackedScene" uid="uid://ca73qkv17jg3g" path="res://Prefabs/create_bucket_screen.tscn" id="7_3wwek"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq2rw"]
+atlas = ExtResource("4_xp8pr")
+region = Rect2(150, 450, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q57e5"]
+atlas = ExtResource("5_am2i3")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="Animation" id="Animation_fq2rw"]
+resource_name = "HideCreate"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreateBucketScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_1a0bt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreateBucketScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_d62kx"]
+resource_name = "ShowCreate"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreateBucketScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 648), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c3t2p"]
+_data = {
+&"HideCreate": SubResource("Animation_fq2rw"),
+&"RESET": SubResource("Animation_1a0bt"),
+&"ShowCreate": SubResource("Animation_d62kx")
+}
+
+[node name="BucketList" type="Control" unique_id=1721805014 node_paths=PackedStringArray("CreateBucketScreen", "Animator", "Buckets")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_e2tus")
+script = ExtResource("2_w68hj")
+EditableLine = ExtResource("3_6g4sj")
+CreateBucketScreen = NodePath("CreateBucketScreen")
+Animator = NodePath("AnimationPlayer")
+Buckets = NodePath("MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer")
+
+[node name="MainMarginContainer" type="MarginContainer" parent="." unique_id=1483527362]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer" unique_id=1067181974]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainMarginContainer/VBoxContainer" unique_id=455589154]
+custom_minimum_size = Vector2(0, 59.24)
+layout_mode = 2
+text = "Bucket List"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMarginContainer/VBoxContainer" unique_id=371980379]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MainMarginContainer/VBoxContainer/MarginContainer" unique_id=578035445]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer" unique_id=342246502]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer" unique_id=1997380219]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer" unique_id=614527712]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ControlsMarginContainer" type="MarginContainer" parent="." unique_id=2004760624]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMarginContainer" unique_id=267922967]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="ControlsMarginContainer/HBoxContainer" unique_id=12621033]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_fq2rw")
+icon_alignment = 1
+
+[node name="CreateBucketButton" type="Button" parent="ControlsMarginContainer/HBoxContainer" unique_id=2110283828 node_paths=PackedStringArray("Animator")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_q57e5")
+icon_alignment = 1
+script = ExtResource("6_tn2bt")
+Animator = NodePath("../../../AnimationPlayer")
+
+[node name="CreateBucketScreen" parent="." unique_id=914328926 instance=ExtResource("7_3wwek")]
+layout_mode = 1
+offset_bottom = -0.0021972656
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=748842928]
+libraries/ = SubResource("AnimationLibrary_c3t2p")

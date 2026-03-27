@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dyantrcu4appb"]
+
+[ext_resource type="Script" uid="uid://c7lmgxbo27cbr" path="res://Scripts/IntStatComponent.cs" id="1_xl61r"]
+[ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="2_55q0r"]
+
+[node name="IntStatComponent" type="Control" unique_id=405167100 node_paths=PackedStringArray("KeyLabel", "ValueEdit", "DeleteButton")]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_xl61r")
+KeyLabel = NodePath("HBoxContainer/KeyLabel")
+ValueEdit = NodePath("HBoxContainer/SpinBox")
+DeleteButton = NodePath("HBoxContainer/DeleteButton")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1685234080]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="KeyLabel" type="Label" parent="HBoxContainer" unique_id=1743627033]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "KEY TEXT: "
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer" unique_id=783792362]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 1.0
+rounded = true
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true
+
+[node name="DeleteButton" parent="HBoxContainer" unique_id=2086522454 node_paths=PackedStringArray("Parent") instance=ExtResource("2_55q0r")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+Parent = NodePath("../..")

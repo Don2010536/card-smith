@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dpxqsx1ndqan2"]
+
+[ext_resource type="Script" uid="uid://be1hha0n4p2mq" path="res://Scripts/DialogNodes/ResponseConditionControl.cs" id="1_78lnn"]
+[ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="2_uffiy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f1271"]
+load_path = "res://.godot/imported/sheet_white1x.png-59a1a5b3fcf97feee46d3c8fb641fc2c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78lnn"]
+atlas = SubResource("CompressedTexture2D_f1271")
+region = Rect2(100, 250, 50, 50)
+
+[node name="ResponseConditionControl" type="MarginContainer" unique_id=468043229 node_paths=PackedStringArray("StatSelector", "ComparrisonSelector", "TrueFalseSelector", "StringCompareValue", "IntCompareValue")]
+script = ExtResource("1_78lnn")
+StatSelector = NodePath("MarginContainer/VBoxContainer/StatOptionButton")
+ComparrisonSelector = NodePath("MarginContainer/VBoxContainer/ComparrisonButton")
+TrueFalseSelector = NodePath("MarginContainer/VBoxContainer/TrueFalseButton")
+StringCompareValue = NodePath("MarginContainer/VBoxContainer/LineEdit")
+IntCompareValue = NodePath("MarginContainer/VBoxContainer/SpinBox")
+
+[node name="Panel" type="Panel" parent="." unique_id=2143992313]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1532043727]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1587045485]
+layout_mode = 2
+
+[node name="StatOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=809649325]
+layout_mode = 2
+alignment = 1
+allow_reselect = true
+
+[node name="ComparrisonButton" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=1644744942]
+layout_mode = 2
+alignment = 1
+
+[node name="TrueFalseButton" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=595413575]
+visible = false
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "True"
+popup/item_0/id = 0
+popup/item_1/text = "False"
+popup/item_1/id = 1
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1357589536]
+visible = false
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer" unique_id=235145654]
+visible = false
+layout_mode = 2
+
+[node name="DeleteButton" parent="MarginContainer/VBoxContainer" unique_id=2086522454 node_paths=PackedStringArray("Parent") instance=ExtResource("2_uffiy")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_78lnn")
+Parent = NodePath("../../..")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://0xd38t063dne"]
+
+[ext_resource type="Script" uid="uid://l0waiy6ur07f" path="res://Scripts/DeletableCharacterSelector.cs" id="1_nmcq3"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="1_stymf"]
+[ext_resource type="Script" uid="uid://c4tipy1q3podo" path="res://Scripts/CharacterSelectButton.cs" id="2_dhddr"]
+[ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="3_dhddr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmcq3"]
+atlas = ExtResource("1_stymf")
+region = Rect2(150, 50, 50, 50)
+
+[node name="DeletableCharacterSelector" type="HBoxContainer" unique_id=1106770753 node_paths=PackedStringArray("Button")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nmcq3")
+Button = NodePath("CharacterSelectButton")
+
+[node name="CharacterSelectButton" type="Button" parent="." unique_id=805755460 node_paths=PackedStringArray("DeleteButton")]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ID : NAME"
+icon = SubResource("AtlasTexture_nmcq3")
+alignment = 0
+script = ExtResource("2_dhddr")
+DeleteButton = NodePath("../DeleteButton")
+
+[node name="DeleteButton" parent="." unique_id=2086522454 node_paths=PackedStringArray("Parent") instance=ExtResource("3_dhddr")]
+layout_mode = 2
+Parent = NodePath("..")

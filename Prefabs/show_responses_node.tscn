@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dcrtromhonbc1"]
+
+[ext_resource type="Script" uid="uid://l7mr7nuevuvm" path="res://Scripts/DialogNodes/ShowResponsesNode.cs" id="1_ega8s"]
+[ext_resource type="PackedScene" uid="uid://5t7ty8p3xf2t" path="res://Prefabs/response_v_box_container.tscn" id="2_6p1sb"]
+
+[node name="ShowResponsesNode" type="GraphNode" unique_id=1584123508 node_paths=PackedStringArray("AddResponseButton")]
+custom_minimum_size = Vector2(580, 125)
+offset_right = 580.0
+offset_bottom = 125.0
+mouse_filter = 1
+theme_override_constants/separation = 16
+resizable = true
+scaling_menus = true
+title = "Show Responses"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(0.27058825, 0.6392157, 0.4, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_ega8s")
+ResponseEditor = ExtResource("2_6p1sb")
+AddResponseButton = NodePath("AddResponseButton")
+
+[node name="AddResponseButton" type="Button" parent="." unique_id=625937268]
+layout_mode = 2
+text = "Add Response"

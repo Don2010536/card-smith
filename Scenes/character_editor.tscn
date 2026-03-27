@@ -1,0 +1,261 @@
+[gd_scene format=3 uid="uid://bpolqpeeknhsg"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_1vb4o"]
+[ext_resource type="Script" uid="uid://dlcrgiwe0v2pq" path="res://Scripts/CharacterEditor/CharacterEditor.cs" id="2_uvaie"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="3_c1sof"]
+[ext_resource type="PackedScene" uid="uid://dyantrcu4appb" path="res://Prefabs/int_stat_component.tscn" id="3_x5tlh"]
+[ext_resource type="PackedScene" uid="uid://bmlkp34g1dimp" path="res://Prefabs/string_stat_component.tscn" id="4_xj74l"]
+[ext_resource type="PackedScene" uid="uid://c1tecttcpvb4k" path="res://Prefabs/bool_stat_component.tscn" id="5_7igea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5tlh"]
+atlas = ExtResource("3_c1sof")
+region = Rect2(150, 450, 50, 50)
+
+[node name="CharacterEditor" type="Control" unique_id=812955306 node_paths=PackedStringArray("SaveButton", "NameEdit", "ConstitutionSpinBox", "InitiativeSpinBox", "HandSizeSpinBox", "MaxHandSizeSpinBox", "DrawAmmountSpinBox", "IntLabel", "StringLabel", "BoolLabel", "CustomIntStatsVBox", "CustomStringStatsVBox", "CustomBoolStatsVBox", "IDLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1vb4o")
+script = ExtResource("2_uvaie")
+IntStatComponent = ExtResource("3_x5tlh")
+StringStatComponent = ExtResource("4_xj74l")
+BoolStatComponent = ExtResource("5_7igea")
+SaveButton = NodePath("ControlsMarginContainer/HBoxContainer/SaveButton")
+NameEdit = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/NameHBoxContainer/NameLineEdit")
+ConstitutionSpinBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/ConstitutionHBoxContainer/SpinBox")
+InitiativeSpinBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/InitiativeHBoxContainer/SpinBox")
+HandSizeSpinBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HandSizeHBoxContainer2/SpinBox")
+MaxHandSizeSpinBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/MaxHandSizeHBoxContainer/SpinBox")
+DrawAmmountSpinBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/DrawAmmountHBoxContainer/SpinBox")
+IntLabel = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer/IntLabel")
+StringLabel = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer/StringLabel")
+BoolLabel = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer/BoolLabel")
+CustomIntStatsVBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer/IntVBoxContainer")
+CustomStringStatsVBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer/StringVBoxContainer")
+CustomBoolStatsVBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer/BoolVBoxContainer")
+IDLabel = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/IdLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2122414593]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1775269733]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1132101924]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Character Editor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1700744805]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel" unique_id=1544088137]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer" unique_id=205797590]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="NameHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1146712640]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/NameHBoxContainer" unique_id=1164176116]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "Name: "
+
+[node name="NameLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/NameHBoxContainer" unique_id=10332134]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Name"
+
+[node name="ConstitutionHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1695436075]
+layout_mode = 2
+
+[node name="ConstitutionLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/ConstitutionHBoxContainer" unique_id=2080237750]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "Constitution: "
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/ConstitutionHBoxContainer" unique_id=1243927652]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 7.0
+rounded = true
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true
+
+[node name="InitiativeHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=45902331]
+layout_mode = 2
+
+[node name="InitiativeLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/InitiativeHBoxContainer" unique_id=897816062]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "Initiative: "
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/InitiativeHBoxContainer" unique_id=1401237422]
+layout_mode = 2
+size_flags_horizontal = 3
+rounded = true
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true
+
+[node name="HandSizeHBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1897789035]
+layout_mode = 2
+
+[node name="HandSizeLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HandSizeHBoxContainer2" unique_id=1725029280]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "Hand Size: "
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/HandSizeHBoxContainer2" unique_id=775068518]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 5.0
+rounded = true
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true
+
+[node name="MaxHandSizeHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=1977349531]
+layout_mode = 2
+
+[node name="MaxHandSizeLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/MaxHandSizeHBoxContainer" unique_id=2075351193]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "Max Hand Size: "
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/MaxHandSizeHBoxContainer" unique_id=1263355709]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 7.0
+rounded = true
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true
+
+[node name="DrawAmmountHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=437603061]
+layout_mode = 2
+
+[node name="DrawAmmountLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/DrawAmmountHBoxContainer" unique_id=274293179]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "Draw Ammount: "
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/DrawAmmountHBoxContainer" unique_id=476062326]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 1.0
+rounded = true
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true
+
+[node name="CustomStatsLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=654343834]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Custom Stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=55439508]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel" unique_id=1122680371]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer" unique_id=1664120715]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer" unique_id=2035779646]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="IntLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1160999322]
+layout_mode = 2
+text = "Integer Stats"
+
+[node name="IntVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1665866655]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="StringLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1835937216]
+layout_mode = 2
+text = "String Stats"
+
+[node name="StringVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=411360489]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BoolLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2077831538]
+layout_mode = 2
+text = "Bool Stats"
+
+[node name="BoolVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=944325900]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="IdLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer" unique_id=579718374]
+layout_mode = 2
+text = "ID: 0"
+horizontal_alignment = 1
+
+[node name="ControlsMarginContainer" type="MarginContainer" parent="." unique_id=299998240]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMarginContainer" unique_id=1512051848]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="ControlsMarginContainer/HBoxContainer" unique_id=1937606065]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_x5tlh")
+icon_alignment = 1

@@ -1,0 +1,373 @@
+[gd_scene format=3 uid="uid://1w6i46uki4t0"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_qy6g2"]
+[ext_resource type="Script" uid="uid://di7lx1b6lbmbu" path="res://Scripts/StatEditor/StatEditor.cs" id="2_rcrkw"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="2_vr1to"]
+[ext_resource type="PackedScene" uid="uid://dyantrcu4appb" path="res://Prefabs/int_stat_component.tscn" id="3_853mw"]
+[ext_resource type="Script" uid="uid://cyx0ovkp4ttrs" path="res://Scripts/ToggleMenueButton.cs" id="4_748rv"]
+[ext_resource type="PackedScene" uid="uid://bmlkp34g1dimp" path="res://Prefabs/string_stat_component.tscn" id="4_njfo5"]
+[ext_resource type="PackedScene" uid="uid://c1tecttcpvb4k" path="res://Prefabs/bool_stat_component.tscn" id="5_bj5ob"]
+[ext_resource type="Script" uid="uid://dpya67ggkqfpg" path="res://Scripts/StatEditor/CreateStatScreen.cs" id="8_3prqn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8vfk"]
+atlas = ExtResource("2_vr1to")
+region = Rect2(400, 300, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_748rv"]
+atlas = ExtResource("2_vr1to")
+region = Rect2(200, 250, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iel37"]
+atlas = ExtResource("2_vr1to")
+region = Rect2(400, 300, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcrkw"]
+atlas = ExtResource("2_vr1to")
+region = Rect2(400, 300, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qy6g2"]
+atlas = ExtResource("2_vr1to")
+region = Rect2(150, 450, 50, 50)
+
+[sub_resource type="Animation" id="Animation_cavfn"]
+resource_name = "HideCreateKey"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreateStatScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(5000, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_coeth"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreateStatScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5000, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_20kdd"]
+resource_name = "ShowCreateKey"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreateStatScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5000, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ujhe"]
+_data = {
+&"HideCreateKey": SubResource("Animation_cavfn"),
+&"RESET": SubResource("Animation_coeth"),
+&"ShowCreateKey": SubResource("Animation_20kdd")
+}
+
+[node name="StatEditor" type="Control" unique_id=1978238031 node_paths=PackedStringArray("AddIntegerStatButton", "AddStringStatButton", "AddBoolStatButton", "IntStatVBox", "StringStatVBox", "BoolStatVBox", "SaveButton", "Animator")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qy6g2")
+script = ExtResource("2_rcrkw")
+IntStatComponent = ExtResource("3_853mw")
+StringStatComponent = ExtResource("4_njfo5")
+BoolStatComponent = ExtResource("5_bj5ob")
+AddIntegerStatButton = NodePath("MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/IntStatsContainer2/AddItemButton")
+AddStringStatButton = NodePath("MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/StringStatsContainer/AddItemButton")
+AddBoolStatButton = NodePath("MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/BoolStatsContainer3/AddItemButton")
+IntStatVBox = NodePath("MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/IntPanel/ScrollContainer/VBoxContainer")
+StringStatVBox = NodePath("MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/StringsPanel/ScrollContainer/VBoxContainer")
+BoolStatVBox = NodePath("MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/BoolPanel/ScrollContainer/VBoxContainer")
+SaveButton = NodePath("ControlsMarginContainer/HBoxContainer/SaveButton")
+Animator = NodePath("AnimationPlayer")
+
+[node name="MainMarginContainer" type="MarginContainer" parent="." unique_id=1494185327]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer" unique_id=1540937357]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainMarginContainer/VBoxContainer" unique_id=2048926462]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Base Stats Editor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMarginContainer/VBoxContainer" unique_id=1773056386]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MainMarginContainer/VBoxContainer/MarginContainer" unique_id=1501450211]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer" unique_id=212094327]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer" unique_id=1793384881]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer" unique_id=826011117]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="IntStatsContainer2" type="HBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=385364626]
+layout_mode = 2
+
+[node name="ToggleMenueButton" type="Button" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/IntStatsContainer2" unique_id=1870684202 node_paths=PackedStringArray("ToToggle")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_l8vfk")
+icon_alignment = 1
+script = ExtResource("4_748rv")
+ToToggle = NodePath("../../IntPanel")
+
+[node name="Label" type="Label" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/IntStatsContainer2" unique_id=442477549]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Integer Stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddItemButton" type="Button" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/IntStatsContainer2" unique_id=1830500006]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_748rv")
+icon_alignment = 1
+
+[node name="IntPanel" type="Panel" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1626466398]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/IntPanel" unique_id=1201360952]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/IntPanel/ScrollContainer" unique_id=697825731]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StringStatsContainer" type="HBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=196538122]
+layout_mode = 2
+
+[node name="ToggleMenueButton" type="Button" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/StringStatsContainer" unique_id=1826329043 node_paths=PackedStringArray("ToToggle")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_iel37")
+icon_alignment = 1
+script = ExtResource("4_748rv")
+ToToggle = NodePath("../../StringsPanel")
+
+[node name="Label" type="Label" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/StringStatsContainer" unique_id=407403162]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "String Stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddItemButton" type="Button" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/StringStatsContainer" unique_id=1854297052]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_748rv")
+icon_alignment = 1
+
+[node name="StringsPanel" type="Panel" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1652601556]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/StringsPanel" unique_id=1927688778]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/StringsPanel/ScrollContainer" unique_id=746603426]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BoolStatsContainer3" type="HBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=640298718]
+layout_mode = 2
+
+[node name="ToggleMenueButton" type="Button" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/BoolStatsContainer3" unique_id=66703820 node_paths=PackedStringArray("ToToggle")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_rcrkw")
+icon_alignment = 1
+script = ExtResource("4_748rv")
+ToToggle = NodePath("../../BoolPanel")
+
+[node name="Label" type="Label" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/BoolStatsContainer3" unique_id=930764482]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Boolean Stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddItemButton" type="Button" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/BoolStatsContainer3" unique_id=1219491749]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_748rv")
+icon_alignment = 1
+
+[node name="BoolPanel" type="Panel" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1444448326]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/BoolPanel" unique_id=521447017]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMarginContainer/VBoxContainer/MarginContainer/MarginContainer/ScrollContainer/VBoxContainer/BoolPanel/ScrollContainer" unique_id=380504723]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ControlsMarginContainer" type="MarginContainer" parent="." unique_id=1101322059]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMarginContainer" unique_id=884994815]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="ControlsMarginContainer/HBoxContainer" unique_id=1124741860]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_qy6g2")
+icon_alignment = 1
+
+[node name="CreateStatScreen" type="ColorRect" parent="." unique_id=1314526980 node_paths=PackedStringArray("StatEditor", "KeyText", "CancelButton", "CreateButton", "ErrorLabel", "Animator")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5000.0
+offset_right = -5000.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.019607844, 0.019607844, 0.019607844, 0.8666667)
+script = ExtResource("8_3prqn")
+StatEditor = NodePath("..")
+KeyText = NodePath("VBoxContainer/HBoxContainer/LineEdit")
+CancelButton = NodePath("VBoxContainer/HBoxContainer2/CancelButton")
+CreateButton = NodePath("VBoxContainer/HBoxContainer2/CreateButton")
+ErrorLabel = NodePath("VBoxContainer/ErrorLabel")
+Animator = NodePath("../AnimationPlayer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreateStatScreen" unique_id=469130840]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CreateStatScreen/VBoxContainer" unique_id=2072273922]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "CREATE STAT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CreateStatScreen/VBoxContainer" unique_id=435605223]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CreateStatScreen/VBoxContainer/HBoxContainer" unique_id=842313411]
+layout_mode = 2
+text = "Key: "
+
+[node name="LineEdit" type="LineEdit" parent="CreateStatScreen/VBoxContainer/HBoxContainer" unique_id=719698596]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ErrorLabel" type="Label" parent="CreateStatScreen/VBoxContainer" unique_id=423468619]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "ERROR: KEYS MUST BE UNIQUE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CreateStatScreen/VBoxContainer" unique_id=1735548808]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="CancelButton" type="Button" parent="CreateStatScreen/VBoxContainer/HBoxContainer2" unique_id=1957743042]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CANCEL"
+
+[node name="CreateButton" type="Button" parent="CreateStatScreen/VBoxContainer/HBoxContainer2" unique_id=1949275714]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CREATE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2137981053]
+libraries/ = SubResource("AnimationLibrary_7ujhe")

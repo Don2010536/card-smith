@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b0e5bppx7fmy4"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_vnn0l"]
+[ext_resource type="Script" uid="uid://bvqx4y6vmbrac" path="res://Scripts/CharacterSelector/CharacterSelector.cs" id="2_t6g5d"]
+[ext_resource type="PackedScene" uid="uid://0xd38t063dne" path="res://Prefabs/character_select_button.tscn" id="3_kj3u4"]
+
+[node name="CharacterSelector" type="Control" unique_id=1911164260 node_paths=PackedStringArray("SelectorContainer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vnn0l")
+script = ExtResource("2_t6g5d")
+CharacterSelectButton = ExtResource("3_kj3u4")
+SelectorContainer = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1963172797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1651500211]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=741790413]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Select a character to edit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=556466601]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel" unique_id=270168853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer" unique_id=433418709]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer" unique_id=929959373]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

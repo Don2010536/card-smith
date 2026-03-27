@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dic38yxfocjuu"]
+
+[ext_resource type="Script" uid="uid://b4aq176qydlpy" path="res://Scripts/Gamemaster.cs" id="1_q8pde"]
+
+[node name="Gamemaster" type="Node2D" unique_id=640228740 node_paths=PackedStringArray("CanvasLayer")]
+script = ExtResource("1_q8pde")
+CanvasLayer = NodePath("CanvasLayer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2121003449]
+follow_viewport_enabled = true

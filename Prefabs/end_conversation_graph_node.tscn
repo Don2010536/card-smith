@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ci7vynucleki3"]
+
+[ext_resource type="Script" uid="uid://bijgvs73eixfy" path="res://Scripts/DialogNodes/EndConversationGraphNode.cs" id="1_21s1m"]
+
+[node name="EndConversationGraphNode" type="GraphNode" unique_id=1473239649]
+offset_right = 280.0
+offset_bottom = 78.0
+mouse_filter = 1
+resizable = true
+title = "End Conversation"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(0.85490197, 0.24313726, 0.26666668, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_21s1m")
+
+[node name="Label" type="Label" parent="." unique_id=401154453]
+layout_mode = 2

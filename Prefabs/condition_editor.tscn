@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://baccmyhsoohgb"]
+
+[ext_resource type="Script" uid="uid://c3lnusree7ysn" path="res://Scripts/ConditionEditor.cs" id="1_r6ybu"]
+[ext_resource type="PackedScene" uid="uid://bqj7gu4ciw5wl" path="res://Prefabs/editable_labeled_entry.tscn" id="2_sjtl3"]
+
+[node name="ConditionEditor" type="Control" unique_id=1415731940 node_paths=PackedStringArray("ConditionName", "DescriptionText", "IDLabel")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_r6ybu")
+ConditionName = NodePath("Panel/MarginContainer/VBoxContainer/EditableLabeledEntry")
+DescriptionText = NodePath("Panel/MarginContainer/VBoxContainer/TextEdit")
+IDLabel = NodePath("Panel/MarginContainer/VBoxContainer/IDLabel")
+
+[node name="Panel" type="Panel" parent="." unique_id=20073326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1960043952]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=873756596]
+layout_mode = 2
+
+[node name="EditableLabeledEntry" parent="Panel/MarginContainer/VBoxContainer" unique_id=1258508914 instance=ExtResource("2_sjtl3")]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="Panel/MarginContainer/VBoxContainer" unique_id=1358310145]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Description"
+
+[node name="IDLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1010470617]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "ID: 0"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://ca73qkv17jg3g"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_cjsjf"]
+[ext_resource type="Script" uid="uid://d3dk13ft5yryy" path="res://Scripts/CreateBucketScreen/CreateBucketScreen.cs" id="2_q2jpr"]
+
+[node name="CreateBucketScreen" type="Control" unique_id=914328926 node_paths=PackedStringArray("NameLine", "CancelButton", "CreateButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cjsjf")
+script = ExtResource("2_q2jpr")
+NameLine = NodePath("MarginContainer/VBoxContainer/MarginContainer/NameLineEdit")
+CancelButton = NodePath("MarginContainer/VBoxContainer/HBoxContainer/CancelButton")
+CreateButton = NodePath("MarginContainer/VBoxContainer/HBoxContainer/CreateButton")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=175813635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=916044471]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1756199669]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=45815032]
+layout_mode = 2
+text = "Create Bucket"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=475024392]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 64
+
+[node name="NameLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=336335344]
+layout_mode = 2
+placeholder_text = "Name"
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=556631713]
+layout_mode = 2
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=758847994]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cancel"
+
+[node name="CreateButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=315940517]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Create"

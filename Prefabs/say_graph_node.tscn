@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b2004081g0hff"]
+
+[ext_resource type="Script" uid="uid://em56tm4m3r6d" path="res://Scripts/DialogNodes/SayGraphNode.cs" id="1_rxjp7"]
+
+[node name="SayGraphNode" type="GraphNode" unique_id=1776059410 node_paths=PackedStringArray("ToSayEdit")]
+custom_minimum_size = Vector2(580, 155)
+offset_right = 580.0
+offset_bottom = 155.0
+mouse_filter = 1
+resizable = true
+title = "Say"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(0.27058825, 0.6392157, 0.4, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(0.27058825, 0.6392157, 0.4, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_rxjp7")
+ToSayEdit = NodePath("TextEdit")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1028323764]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Dialog here"

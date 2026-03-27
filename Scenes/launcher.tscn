@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://6doric0fiv37"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_uvje1"]
+[ext_resource type="Script" uid="uid://taapy2713gq7" path="res://Scripts/Launcher/LauncherMarginContainer.cs" id="2_6egj4"]
+[ext_resource type="Script" uid="uid://ci5hjf40icke7" path="res://Scripts/Launcher/Launcher.cs" id="2_bmfkt"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="3_bmfkt"]
+[ext_resource type="Script" uid="uid://ce6dwmqliawve" path="res://Scripts/Launcher/NewProjectMarginContainer.cs" id="4_hdvyu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk6tn"]
+bg_color = Color(0.101960786, 0.101960786, 0.11764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0maxm"]
+bg_color = Color(0.07058824, 0.07058824, 0.078431375, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h78w"]
+atlas = ExtResource("3_bmfkt")
+region = Rect2(200, 250, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1bia"]
+atlas = ExtResource("3_bmfkt")
+region = Rect2(300, 450, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrnla"]
+atlas = ExtResource("3_bmfkt")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqmbj"]
+atlas = ExtResource("3_bmfkt")
+region = Rect2(150, 450, 50, 50)
+
+[sub_resource type="Animation" id="Animation_yk05d"]
+resource_name = "HideNewProject"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main/NewProjectMarginContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1080)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main/LauncherMarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1080), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oaiu7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main/NewProjectMarginContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1920)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main/LauncherMarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kwcf0"]
+resource_name = "ShowNewProject"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main/NewProjectMarginContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1080), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main/LauncherMarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1080)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_84a7s"]
+_data = {
+&"HideNewProject": SubResource("Animation_yk05d"),
+&"RESET": SubResource("Animation_oaiu7"),
+&"ShowNewProject": SubResource("Animation_kwcf0")
+}
+
+[node name="Launcher" type="Control" unique_id=57211849]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_uvje1")
+script = ExtResource("2_bmfkt")
+
+[node name="Main" type="Panel" parent="." unique_id=575783576]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mk6tn")
+
+[node name="LauncherMarginContainer" type="MarginContainer" parent="Main" unique_id=1710458974 node_paths=PackedStringArray("Animator", "NewProjectButton", "LoadProjectButton", "ErrorLabel")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_6egj4")
+Animator = NodePath("../../AnimationPlayer")
+NewProjectButton = NodePath("Panel/VBoxContainer/NewButton")
+LoadProjectButton = NodePath("Panel/VBoxContainer/LoadButton")
+ErrorLabel = NodePath("Panel/VBoxContainer/ErrorLabel")
+
+[node name="Panel" type="Panel" parent="Main/LauncherMarginContainer" unique_id=434224184]
+custom_minimum_size = Vector2(500, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_0maxm")
+
+[node name="Label" type="Label" parent="Main/LauncherMarginContainer/Panel" unique_id=1108195161]
+layout_mode = 0
+offset_top = 61.0
+offset_right = 500.0
+offset_bottom = 111.0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 44
+text = "CardSmith"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/LauncherMarginContainer/Panel" unique_id=1632866322]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ErrorLabel" type="Label" parent="Main/LauncherMarginContainer/Panel/VBoxContainer" unique_id=1750512295]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Error: INVALID PROJECT FOLDER"
+horizontal_alignment = 1
+
+[node name="NewButton" type="Button" parent="Main/LauncherMarginContainer/Panel/VBoxContainer" unique_id=1267839565]
+custom_minimum_size = Vector2(255, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "New Project..."
+icon = SubResource("AtlasTexture_3h78w")
+
+[node name="LoadButton" type="Button" parent="Main/LauncherMarginContainer/Panel/VBoxContainer" unique_id=1331170364]
+custom_minimum_size = Vector2(255, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load Project..."
+icon = SubResource("AtlasTexture_l1bia")
+
+[node name="NewProjectMarginContainer" type="MarginContainer" parent="Main" unique_id=1346208793 node_paths=PackedStringArray("Animator", "ErrorLabel", "ProjectName", "SaveButton", "BackButton")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1920.0
+offset_bottom = 1919.9995
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_hdvyu")
+Animator = NodePath("../../AnimationPlayer")
+ErrorLabel = NodePath("Panel/VBoxContainer/ErrorLabel")
+ProjectName = NodePath("Panel/VBoxContainer/LineEdit")
+SaveButton = NodePath("Panel/VBoxContainer/HBoxContainer/SaveButton")
+BackButton = NodePath("Panel/VBoxContainer/HBoxContainer/BackButton")
+
+[node name="Panel" type="Panel" parent="Main/NewProjectMarginContainer" unique_id=2079543542]
+custom_minimum_size = Vector2(500, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_0maxm")
+
+[node name="Label" type="Label" parent="Main/NewProjectMarginContainer/Panel" unique_id=1841524014]
+layout_mode = 0
+offset_top = 61.0
+offset_right = 500.0
+offset_bottom = 111.0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 44
+text = "New Project"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/NewProjectMarginContainer/Panel" unique_id=1059913143]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ErrorLabel" type="Label" parent="Main/NewProjectMarginContainer/Panel/VBoxContainer" unique_id=150328785]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Error: Project already exist"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Main/NewProjectMarginContainer/Panel/VBoxContainer" unique_id=1486379883]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+placeholder_text = "Project Name"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/NewProjectMarginContainer/Panel/VBoxContainer" unique_id=1823389751]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="BackButton" type="Button" parent="Main/NewProjectMarginContainer/Panel/VBoxContainer/HBoxContainer" unique_id=426784270]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+icon = SubResource("AtlasTexture_xrnla")
+
+[node name="SaveButton" type="Button" parent="Main/NewProjectMarginContainer/Panel/VBoxContainer/HBoxContainer" unique_id=1051224818]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Save"
+icon = SubResource("AtlasTexture_hqmbj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1463631180]
+libraries/ = SubResource("AnimationLibrary_84a7s")

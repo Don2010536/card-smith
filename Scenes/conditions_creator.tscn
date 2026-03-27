@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://go0u4jmcxeug"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_43qh6"]
+[ext_resource type="Script" uid="uid://cf4r0y2tihhr8" path="res://Scripts/ConditionsCreator/ConditionsCreator.cs" id="2_qfeva"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="3_jrkl7"]
+[ext_resource type="PackedScene" uid="uid://baccmyhsoohgb" path="res://Prefabs/condition_editor.tscn" id="3_qfeva"]
+[ext_resource type="Texture2D" uid="uid://bqoqpfyk0oknj" path="res://Assets/expanded_white1x.png" id="4_4okjf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q11nm"]
+atlas = ExtResource("4_4okjf")
+region = Rect2(150, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fftdj"]
+atlas = ExtResource("3_jrkl7")
+region = Rect2(150, 450, 50, 50)
+
+[node name="ConditionsCreator" type="Control" unique_id=1687612799 node_paths=PackedStringArray("ConditionsVBox", "CreateConditionButton", "SaveConditionButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_43qh6")
+script = ExtResource("2_qfeva")
+ConditionEditor = ExtResource("3_qfeva")
+ConditionsVBox = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer/VBoxContainer")
+CreateConditionButton = NodePath("ControlsMarginContainer/HBoxContainer/CreateConditionButton")
+SaveConditionButton = NodePath("ControlsMarginContainer/HBoxContainer/SaveButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=279969134]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=66314617]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=13373772]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Conditions Creator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=2046163791]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel" unique_id=177071023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer" unique_id=186648660]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/ScrollContainer" unique_id=38865126]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ControlsMarginContainer" type="MarginContainer" parent="." unique_id=198505772]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMarginContainer" unique_id=805678306]
+layout_mode = 2
+
+[node name="CreateConditionButton" type="Button" parent="ControlsMarginContainer/HBoxContainer" unique_id=1933550847]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_q11nm")
+icon_alignment = 1
+
+[node name="SaveButton" type="Button" parent="ControlsMarginContainer/HBoxContainer" unique_id=565964816]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+icon = SubResource("AtlasTexture_fftdj")
+icon_alignment = 1

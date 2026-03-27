@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://clomr1lhqv6q4"]
+
+[ext_resource type="Script" uid="uid://dk221oqxjhu32" path="res://Scripts/DialogNodes/StartConversationGraphNode.cs" id="1_48mu8"]
+
+[node name="StartConversationGraphNode" type="GraphNode" unique_id=1657525974]
+custom_minimum_size = Vector2(280, 78)
+offset_right = 280.0
+offset_bottom = 78.0
+mouse_filter = 1
+title = "Start Conversation"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(0.44705883, 0.5372549, 0.85490197, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_48mu8")
+
+[node name="Label" type="Label" parent="." unique_id=1998553158]
+layout_mode = 2

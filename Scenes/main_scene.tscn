@@ -1,0 +1,331 @@
+[gd_scene format=3 uid="uid://mmuq2yw13t0b"]
+
+[ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_x6ack"]
+[ext_resource type="Script" uid="uid://46pnije7afo0" path="res://Scripts/MainScene/MainScene.cs" id="2_6ev3c"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="2_iacmt"]
+[ext_resource type="Script" uid="uid://4adqqdfq24rv" path="res://Scripts/MainScene/ToggleNavigationButton.cs" id="3_6ev3c"]
+[ext_resource type="Texture2D" uid="uid://djg6gv63hkhjj" path="res://Assets/bitmap.png" id="3_huasi"]
+[ext_resource type="Script" uid="uid://rkctfinqlls1" path="res://Scripts/MainScene/HideNavButton.cs" id="4_maf8m"]
+[ext_resource type="Script" uid="uid://bblixh4b5xk1h" path="res://Scripts/NavigationButton.cs" id="6_6ev3c"]
+[ext_resource type="Script" uid="uid://dm8tvsbr8hjli" path="res://Scripts/MainScene/SaveProjectButton.cs" id="7_maf8m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huasi"]
+bg_color = Color(0.101960786, 0.101960786, 0.11764706, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1efj"]
+atlas = ExtResource("2_iacmt")
+region = Rect2(0, 200, 50, 50)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mai8y"]
+bg_color = Color(0.07058824, 0.07058824, 0.078431375, 1)
+border_width_right = 2
+border_color = Color(0.13333334, 0.13333334, 0.14509805, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76v2p"]
+atlas = ExtResource("2_iacmt")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drdnd"]
+bg_color = Color(0.13333334, 0.13333334, 0.14509805, 1)
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="Animation" id="Animation_ioaeq"]
+resource_name = "HideNav"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-400, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7ewk0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-400, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lhp3t"]
+resource_name = "ShowNav"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-400, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gnsmo"]
+_data = {
+&"HideNav": SubResource("Animation_ioaeq"),
+&"RESET": SubResource("Animation_7ewk0"),
+&"ShowNav": SubResource("Animation_lhp3t")
+}
+
+[node name="MainScene" type="Control" unique_id=1120797180 node_paths=PackedStringArray("Main")]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_x6ack")
+script = ExtResource("2_6ev3c")
+Main = NodePath("Main/SceneContainer")
+
+[node name="Main" type="Panel" parent="." unique_id=760893618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_huasi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main" unique_id=2081970919]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Main/HBoxContainer" unique_id=1007599870]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_huasi")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Main/HBoxContainer" unique_id=1997014653]
+layout_mode = 2
+theme_override_font_sizes/font_size = 220
+text = "CARDSMITH"
+
+[node name="SceneContainer" type="Control" parent="Main" unique_id=1552397809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Main" unique_id=1516075436]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 62.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ToggleNavigationButton" type="Button" parent="Main/MarginContainer" unique_id=415390937 node_paths=PackedStringArray("Animator")]
+custom_minimum_size = Vector2(54, 54)
+layout_mode = 2
+icon = SubResource("AtlasTexture_m1efj")
+script = ExtResource("3_6ev3c")
+Animator = NodePath("../../../AnimationPlayer")
+
+[node name="Panel" type="Panel" parent="." unique_id=1094545046]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -400.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mai8y")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=373376353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=505006648]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1562338016]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Navigation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HideNavButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/Label" unique_id=1795856313 node_paths=PackedStringArray("Animator", "ToggleNavButton")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+icon = SubResource("AtlasTexture_76v2p")
+script = ExtResource("4_maf8m")
+Animator = NodePath("../../../../../AnimationPlayer")
+ToggleNavButton = NodePath("../../../../../Main/MarginContainer/ToggleNavigationButton")
+
+[node name="Panel" type="Panel" parent="Panel/MarginContainer/VBoxContainer" unique_id=1124089599]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_drdnd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=346896914]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=2142509845]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="BucketsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1595825923]
+layout_mode = 2
+
+[node name="BucketsLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=1754047998]
+layout_mode = 2
+text = "Buckets"
+horizontal_alignment = 1
+
+[node name="BucketCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=37202832]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Bucket Creator"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 2
+
+[node name="BucketEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=400163039]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Bucket Editor"
+
+[node name="StatsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1163100181]
+layout_mode = 2
+
+[node name="StatsLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=1127537574]
+layout_mode = 2
+text = "Stats"
+horizontal_alignment = 1
+
+[node name="StatEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=2142418793]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Stat Editor"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 3
+
+[node name="ConditionsCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=130885390]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Conditions Creator"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 6
+
+[node name="CharacterContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1011220436]
+layout_mode = 2
+
+[node name="CharacterLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1078959260]
+layout_mode = 2
+text = "Characters"
+horizontal_alignment = 1
+
+[node name="CharacterCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=673125596]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Character Creator"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 4
+
+[node name="CharacterEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1785572488]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Character Editor"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 5
+
+[node name="DialogCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1604236885]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Dialog Creator"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 8
+
+[node name="DialogEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=76300037]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Dialog Editor"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 5
+
+[node name="CardContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=812999319]
+layout_mode = 2
+
+[node name="CardLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=487347482]
+layout_mode = 2
+text = "Cards"
+horizontal_alignment = 1
+
+[node name="CardCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=2138095784]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Card Creator"
+
+[node name="CardEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1743749241]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Card Editor"
+
+[node name="TagCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1451553398]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Tag Creator"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 7
+
+[node name="ExportContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=477443632]
+layout_mode = 2
+
+[node name="ExportLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1022631979]
+layout_mode = 2
+text = "Export/Save"
+horizontal_alignment = 1
+
+[node name="SaveProjectButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1772195004]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Save Project"
+script = ExtResource("7_maf8m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=376770139]
+libraries/ = SubResource("AnimationLibrary_gnsmo")

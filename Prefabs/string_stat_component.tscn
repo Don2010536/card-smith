@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bmlkp34g1dimp"]
+
+[ext_resource type="Script" uid="uid://cacnv5wq03s4q" path="res://Scripts/StringStatComponent.cs" id="1_uijk4"]
+[ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="2_40o2r"]
+
+[node name="StringStatComponent" type="Control" unique_id=269729937 node_paths=PackedStringArray("KeyLabel", "ValueEdit", "DeleteButton")]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_uijk4")
+KeyLabel = NodePath("HBoxContainer/KeyLabel")
+ValueEdit = NodePath("HBoxContainer/LineEdit")
+DeleteButton = NodePath("HBoxContainer/DeleteButton")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1226056169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="KeyLabel" type="Label" parent="HBoxContainer" unique_id=1243958572]
+custom_minimum_size = Vector2(284, 0)
+layout_mode = 2
+text = "KEY TEXT:"
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer" unique_id=572452718]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeleteButton" parent="HBoxContainer" unique_id=2086522454 node_paths=PackedStringArray("Parent") instance=ExtResource("2_40o2r")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+Parent = NodePath("../..")
