@@ -10,7 +10,7 @@ namespace CardSmithData.Dialog
     public class SaveDialog : IDialog
     {
         public DialogNodeTypes DialogNodeType { get; set; } = DialogNodeTypes.Save;
-        public List<IDialog> RightConnections { get; set; }
+        public List<IDialog> RightConnections { get; set; } = [];
 
         public void Load(ref BinaryReader reader)
         {

@@ -18,11 +18,16 @@ public partial class EndConversationGraphNode : GraphNode, IDialogNode
 	{
 	}
 
-    public IDialog BuildDialog()
+    public void BuildDialog()
     {
-        EndDialog end = new ();
+        GD.Print("[+] Building end node");
+        DialogData = new EndDialog();
+        GD.Print("[✓] Built end node");
+    }
 
-        return end;
+    public void FillConnections()
+    {
+        GD.Print("[✓] End node doesn't have a connection on the right");
     }
 
     public void SaveNode(ref BinaryWriter writer)

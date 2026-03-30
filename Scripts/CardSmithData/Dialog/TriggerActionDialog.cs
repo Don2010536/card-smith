@@ -11,7 +11,7 @@ namespace CardSmithData.Dialog
     {
         public int ActionID { get; set; }
         public DialogNodeTypes DialogNodeType { get; set; } = DialogNodeTypes.TriggerAction;
-        public List<IDialog> RightConnections { get; set; }
+        public List<IDialog> RightConnections { get; set; } = [];
 
         public void Load(ref BinaryReader reader)
         {

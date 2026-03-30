@@ -21,8 +21,15 @@ public partial class LoadConversationGraphNode : GraphNode, IDialogNode
         PositionOffset = new(reader.ReadSingle(), reader.ReadSingle());
     }
 
-    public IDialog BuildDialog()
+    public void BuildDialog()
     {
-        return DialogData;
+        GD.Print("[+] Building load");
+        DialogData = new LoadDialog();
+        GD.Print("[✓] Built load");
+    }
+
+    public void FillConnections()
+    {
+        GD.Print("[✓] Load node doesn't have a connection on the right");
     }
 }

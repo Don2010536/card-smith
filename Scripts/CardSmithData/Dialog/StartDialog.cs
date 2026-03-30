@@ -10,7 +10,7 @@ namespace CardSmithData.Dialog
     public class StartDialog : IStart
     {
         public DialogNodeTypes DialogNodeType { get; set; } = DialogNodeTypes.Start;
-        public List<IDialog> RightConnections { get; set; }
+        public List<IDialog> RightConnections { get; set; } = [];
 
         public void Load(ref BinaryReader reader)
         {

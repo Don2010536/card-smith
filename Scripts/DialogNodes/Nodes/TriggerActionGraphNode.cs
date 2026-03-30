@@ -1,3 +1,4 @@
+using CardSmith.Scripts.DialogNodes.Nodes;
 using CardSmithData.Dialog;
 using Godot;
 using System;
@@ -23,8 +24,6 @@ public partial class TriggerActionGraphNode : GraphNode, IDialogNode
     public DialogNodeTypes DialogNodeTypes { get; set; } = DialogNodeTypes.TriggerAction;
     public IDialog DialogData { get; set; }
 
-
-    // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         ActionText.TextSubmitted += ActionText_TextSubmitted;
@@ -100,8 +99,9 @@ public partial class TriggerActionGraphNode : GraphNode, IDialogNode
         PositionOffset = new(reader.ReadSingle(), reader.ReadSingle());
     }
 
-    public IDialog BuildDialog()
+    public void BuildDialog()
     {
+        GD.Print("[+] Building trigger action");
         TriggerActionDialog triggerAction = new();
 
         foreach (var entry in DataManager.Instance.ActionManager.Actions)
@@ -109,12 +109,17 @@ public partial class TriggerActionGraphNode : GraphNode, IDialogNode
             if (entry.Value == ActionsSelector.Text)
             {
                 triggerAction.ActionID = entry.Key;
+                GD.Print($"\t[~] Action {triggerAction.ActionID}:{entry.Value}");
                 break;
             }
         }
 
         DialogData = triggerAction;
+        GD.Print("[✓] Built trigger action");
+    }
 
-        return DialogData;
+    public void FillConnections()
+    {
+        NodeUtilities.FillConnections(this);
     }
 }

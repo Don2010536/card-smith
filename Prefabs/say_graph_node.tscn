@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2004081g0hff"]
 
-[ext_resource type="Script" uid="uid://em56tm4m3r6d" path="res://Scripts/DialogNodes/SayGraphNode.cs" id="1_rxjp7"]
+[ext_resource type="Script" uid="uid://7h5s4t2m1b2k" path="res://Scripts/DialogNodes/Nodes/SayGraphNode.cs" id="1_rxjp7"]
 
 [node name="SayGraphNode" type="GraphNode" unique_id=1776059410 node_paths=PackedStringArray("ToSayEdit")]
 custom_minimum_size = Vector2(580, 155)

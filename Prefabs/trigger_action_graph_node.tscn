@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://sdhmfxxxt2hl"]
 
 [ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="1_3x0vm"]
-[ext_resource type="Script" uid="uid://bmg1yejyp0ae3" path="res://Scripts/DialogNodes/TriggerActionGraphNode.cs" id="1_8rw3o"]
+[ext_resource type="Script" uid="uid://oa7okgs45ksa" path="res://Scripts/DialogNodes/Nodes/TriggerActionGraphNode.cs" id="1_8rw3o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8rw3o"]
 atlas = ExtResource("1_3x0vm")

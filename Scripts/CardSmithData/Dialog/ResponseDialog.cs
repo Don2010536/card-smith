@@ -13,11 +13,11 @@ namespace CardSmithData.Dialog
     {
         public string RespnseText { get; set; }
 
-        public DialogNodeTypes DialogNodeType { get; set; }
+        public DialogNodeTypes DialogNodeType { get; set; } = DialogNodeTypes.Response;
         public LogicalOperators LogicalOperator { get; set; }
-        
-        public List<IResponseCondition> Conditions { get; set; }
-        public List<IDialog> RightConnections { get; set; }
+
+        public List<IResponseCondition> Conditions { get; set; } = [];
+        public List<IDialog> RightConnections { get; set; } = [];
 
         public void Load(ref BinaryReader reader)
         {

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dcrtromhonbc1"]
 
-[ext_resource type="Script" uid="uid://l7mr7nuevuvm" path="res://Scripts/DialogNodes/ShowResponsesNode.cs" id="1_ega8s"]
+[ext_resource type="Script" uid="uid://bxepdg0e6m37j" path="res://Scripts/DialogNodes/Nodes/ShowResponsesNode.cs" id="1_ega8s"]
 [ext_resource type="PackedScene" uid="uid://5t7ty8p3xf2t" path="res://Prefabs/response_v_box_container.tscn" id="2_6p1sb"]
 
 [node name="ShowResponsesNode" type="GraphNode" unique_id=1584123508 node_paths=PackedStringArray("AddResponseButton")]

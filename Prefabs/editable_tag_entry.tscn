@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bopbc6i1wgxq" path="res://Scripts/EditableTagEntry.cs" id="1_eoye2"]
 [ext_resource type="PackedScene" uid="uid://bqj7gu4ciw5wl" path="res://Prefabs/editable_labeled_entry.tscn" id="2_yokpq"]
 
-[node name="EditableTagEntry" type="Control" unique_id=59600921]
+[node name="EditableTagEntry" type="Control" unique_id=59600921 node_paths=PackedStringArray("EditableLabeledEntry", "IDLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eoye2")
+EditableLabeledEntry = NodePath("VBoxContainer/EditableLabeledEntry")
+IDLabel = NodePath("VBoxContainer/IDLabel")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2055703604]
 custom_minimum_size = Vector2(0, 60)

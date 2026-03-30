@@ -1,3 +1,4 @@
+using CardSmith.Scripts.DialogNodes.Nodes;
 using CardSmithData.Dialog;
 using CardSmithData.Dialog.Responses;
 using Godot;
@@ -73,17 +74,56 @@ public partial class ShowResponsesNode : GraphNode, IDialogNode
         }
     }
 
-    public IDialog BuildDialog()
+    public void BuildDialog()
     {
+        GD.Print("[+] Building show responses");
         ShowResponsesDialog showResponses = new();
 
-        foreach (ResponseVBoxContainer response in GetChildren().Where(x => x.GetType() == typeof(ResponseVBoxContainer)))
+        foreach (Control response in GetChildren())
         {
-            showResponses.Responses.Add((IResponse)response.BuildDialog());
+            if (response.GetType() == typeof(ResponseVBoxContainer))
+            {
+                ((ResponseVBoxContainer)response).BuildDialog();
+
+                showResponses.Responses.Add((IResponse)((ResponseVBoxContainer)response).DialogData);
+                GD.Print("\t[~] Added response to show responses");
+            }
         }
 
         DialogData = showResponses;
+        GD.Print("[✓] Built show responses");
+    }
 
-        return DialogData;
+    public void FillConnections()
+    {
+        IDialog connection;
+        int slot = 0;
+        DialogGraphEdit graph = GetParent<DialogGraphEdit>();
+        GD.Print($"[+] Finding {DialogNodeTypes} connection");
+
+
+        foreach (Control response in GetChildren())
+        {
+            if (response.GetType() == typeof(ResponseVBoxContainer))
+            {
+                GD.Print($"\t[~] Looking for connection from {Name} on slot {slot}");
+                connection = graph.GetConnection(Name, slot);
+
+                if (connection != null)
+                {
+                    GD.Print($"\t[~] Connection found from {DialogNodeTypes} to {connection.DialogNodeType}");
+
+                    ((ResponseVBoxContainer)response).DialogData.RightConnections.Add(connection);
+                    GD.Print($"\t[~] Added connection to response");
+                } else
+                {
+                    GD.Print($"\t[x] No connection from {Name} on slot {slot} this will end the conversation if if selected");
+                }
+                
+                slot++;
+            }
+        }
+
+        GD.Print("[✓] Connections added");
     }
 }

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clomr1lhqv6q4"]
 
-[ext_resource type="Script" uid="uid://dk221oqxjhu32" path="res://Scripts/DialogNodes/StartConversationGraphNode.cs" id="1_48mu8"]
+[ext_resource type="Script" uid="uid://dmepiinu71h8d" path="res://Scripts/DialogNodes/Nodes/StartConversationGraphNode.cs" id="1_48mu8"]
 
 [node name="StartConversationGraphNode" type="GraphNode" unique_id=1657525974]
 custom_minimum_size = Vector2(280, 78)

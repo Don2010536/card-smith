@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5t7ty8p3xf2t"]
 
-[ext_resource type="Script" uid="uid://tycofxwl76b1" path="res://Scripts/DialogNodes/ResponseVBoxContainer.cs" id="1_xshdt"]
+[ext_resource type="Script" uid="uid://dy030sssrmwoq" path="res://Scripts/DialogNodes/Nodes/ResponseVBoxContainer.cs" id="1_xshdt"]
 [ext_resource type="PackedScene" uid="uid://dpxqsx1ndqan2" path="res://Prefabs/response_condition_control.tscn" id="2_f5udr"]
 [ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="3_8h7yn"]
 

@@ -184,14 +184,19 @@ public partial class ResponseConditionControl : MarginContainer, IDialogNode
 		IntCompareValue.Value = reader.ReadDouble();
     }
 
-    public IDialog BuildDialog()
+    public void BuildDialog()
     {
+        GD.Print("\t\t[+] Building response condition");
         ResponseConditionDialog responseCondition = new ResponseConditionDialog();
         string key = StatSelector.GetItemText(StatSelector.Selected);
 
         responseCondition.StatType = statMap[key].statType;
+        GD.Print($"\t\t\t[~] Comparison stat type: {responseCondition.StatType}");
+
         responseCondition.ComparissonType = comparrisonMap[ComparrisonSelector.GetItemText(ComparrisonSelector.Selected)];
-        switch(responseCondition.StatType)
+        GD.Print($"\t\t\t[~] Comparison type: {responseCondition.ComparissonType}");
+
+        switch (responseCondition.StatType)
         {
             case StatTypes.Int:
                 responseCondition.ComparrisonValue = IntCompareValue.Value.ToString();
@@ -203,10 +208,17 @@ public partial class ResponseConditionControl : MarginContainer, IDialogNode
                 responseCondition.ComparrisonValue = TrueFalseSelector.ButtonPressed.ToString();
                 break;
         }
+        GD.Print($"\t\t\t[~] Comparison value: {responseCondition.ComparrisonValue}");
+
         responseCondition.CustomStatUsed = statMap[key].custom;
+        GD.Print($"\t\t\t[~] Custom stat used: {responseCondition.CustomStatUsed}");
 
         DialogData = responseCondition;
+        GD.Print($"\t\t[✓] Built response condition");
+    }
 
-        return DialogData;
+    public void FillConnections()
+    {
+        GD.Print("[✓] Response condition does not have connections");
     }
 }

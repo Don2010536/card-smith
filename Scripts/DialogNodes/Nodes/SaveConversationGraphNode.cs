@@ -1,3 +1,4 @@
+using CardSmith.Scripts.DialogNodes.Nodes;
 using CardSmithData.Dialog;
 using Godot;
 using System;
@@ -21,10 +22,15 @@ public partial class SaveConversationGraphNode : GraphNode, IDialogNode
         PositionOffset = new(reader.ReadSingle(), reader.ReadSingle());
     }
 
-    public IDialog BuildDialog()
+    public void BuildDialog()
     {
+        GD.Print("[+] Building save");
         DialogData = new SaveDialog();
+        GD.Print("[✓] Built save");
+    }
 
-        return DialogData;
+    public void FillConnections()
+    {
+        NodeUtilities.FillConnections(this);
     }
 }

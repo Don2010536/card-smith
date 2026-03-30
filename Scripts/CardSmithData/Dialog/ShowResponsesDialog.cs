@@ -10,10 +10,10 @@ namespace CardSmithData.Dialog
 {
     public class ShowResponsesDialog : IShowResponses
     {
-        public DialogNodeTypes DialogNodeType { get; set; }
+        public DialogNodeTypes DialogNodeType { get; set; } = DialogNodeTypes.ShowResponse;
 
-        public List<IResponse> Responses { get; set; }
-        public List<IDialog> RightConnections { get; set; }
+        public List<IResponse> Responses { get; set; } = [];
+        public List<IDialog> RightConnections { get; set; } = [];
 
         public void Load(ref BinaryReader reader)
         {

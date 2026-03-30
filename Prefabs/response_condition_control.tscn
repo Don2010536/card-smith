@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dpxqsx1ndqan2"]
 
-[ext_resource type="Script" uid="uid://be1hha0n4p2mq" path="res://Scripts/DialogNodes/ResponseConditionControl.cs" id="1_78lnn"]
+[ext_resource type="Script" uid="uid://bjfe070yu6irk" path="res://Scripts/DialogNodes/Nodes/ResponseConditionControl.cs" id="1_78lnn"]
 [ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="2_uffiy"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f1271"]

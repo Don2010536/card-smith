@@ -10,7 +10,7 @@ namespace CardSmithData.Dialog
     public class SayDialog : ISay
     {
         public DialogNodeTypes DialogNodeType { get; set; } = DialogNodeTypes.Say;
-        public List<IDialog> RightConnections { get; set; }
+        public List<IDialog> RightConnections { get; set; } = [];
         public string Text { get; set; }
 
         public void Load(ref BinaryReader reader)

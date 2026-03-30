@@ -151,7 +151,44 @@ public partial class DialogGraphEdit : GraphEdit
         {
             GD.Print("Tree bad");
         }
-        
+
+        Dictionary<string, IDialogNode> nodeMap = [];
+        IDialogNode node = null;
+        string from;
+        string to;
+
+        for (int i = 0; i < Connections.Count; i++)
+        {
+            from = Connections[i]["from_node"].AsString();
+            to = Connections[i]["to_node"].AsString();
+
+            if (!nodeMap.ContainsKey(from))
+            {
+                node = GetNode<IDialogNode>(Connections[i]["from_node"].ToString());
+                node.BuildDialog();
+
+                nodeMap.Add(from, node);
+            }
+
+            if (!nodeMap.ContainsKey(to))
+            {
+                node = GetNode<IDialogNode>(Connections[i]["to_node"].ToString());
+                node.BuildDialog();
+
+                nodeMap.Add(to, node);
+            }
+        }
+
+        foreach (string key in nodeMap.Keys)
+        {
+            nodeMap[key].FillConnections();
+
+            if (nodeMap[key].DialogNodeTypes == DialogNodeTypes.Start)
+            {
+                tree.EntryPoint = nodeMap[key].DialogData;
+            }
+        }
+
         return tree;
     }
 

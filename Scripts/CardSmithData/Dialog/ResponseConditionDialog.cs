@@ -18,7 +18,7 @@ namespace CardSmithData.Dialog
         
         public string StatKey { get; set; }
         public string ComparrisonValue { get; set; }
-        public List<IDialog> RightConnections { get; set; }
+        public List<IDialog> RightConnections { get; set; } = [];
 
         public void Load(ref BinaryReader reader)
         {

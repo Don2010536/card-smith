@@ -1,3 +1,4 @@
+using CardSmith.Scripts.DialogNodes.Nodes;
 using CardSmithData.Dialog;
 using Godot;
 using System;
@@ -11,7 +12,7 @@ public partial class SayGraphNode : GraphNode, IDialogNode
 	public TextEdit ToSayEdit { get; set; }
 
     public DialogNodeTypes DialogNodeTypes { get; set; } = DialogNodeTypes.Say;
-    public IDialog DialogData { get; set; } = new SayDialog();
+    public IDialog DialogData { get; set; }
 
     public override void _Ready()
 	{
@@ -33,10 +34,19 @@ public partial class SayGraphNode : GraphNode, IDialogNode
         PositionOffset = new(reader.ReadSingle(), reader.ReadSingle());
     }
 
-    public IDialog BuildDialog()
+    public void BuildDialog()
     {
-        ((SayDialog)DialogData).Text = ToSayEdit.Text;
+        GD.Print("[+] Building say");
+        SayDialog dialog = new ();
+        dialog.Text = ToSayEdit.Text;
+        GD.Print($"\t[~] Say text: {dialog.Text}");
 
-        return DialogData;
+        DialogData = dialog;
+        GD.Print("[✓] Built say");
+    }
+
+    public void FillConnections()
+    {
+        NodeUtilities.FillConnections(this);
     }
 }

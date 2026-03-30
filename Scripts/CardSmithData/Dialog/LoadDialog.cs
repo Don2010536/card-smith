@@ -9,8 +9,8 @@ namespace CardSmithData.Dialog
 {
     public class LoadDialog : ILoad
     {
-        public DialogNodeTypes DialogNodeType { get; set; }
-        public List<IDialog> RightConnections { get; set; }
+        public DialogNodeTypes DialogNodeType { get; set; } = DialogNodeTypes.Load;
+        public List<IDialog> RightConnections { get; set; } = [];
 
         public void Load(ref BinaryReader reader)
         {
