@@ -19,8 +19,6 @@ public partial class ConditionEditor : Control
 	{
 		if (Condition == null) QueueFree();
 
-		GD.Print(Condition.Name);
-
 		ConditionName.DeleteButton.Parent = this;
 		ConditionName.Text = Condition.Name;
 		ConditionName.Editor.Text = Condition.Name;

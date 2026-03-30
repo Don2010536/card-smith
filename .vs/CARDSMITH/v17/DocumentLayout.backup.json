@@ -3,48 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\responsevboxcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\responsevboxcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\triggeractiongraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\triggeractiongraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\showresponsesnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\showresponsesnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\startconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\startconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\triggeractiongraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\triggeractiongraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\showresponsesnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\showresponsesnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\startconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\startconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\saygraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\saygraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\spawndialognodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\spawndialognodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\saveconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\saveconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\saygraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\saygraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\responsevboxcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\responsevboxcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\saveconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\saveconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\responseconditioncontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\responseconditioncontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\endconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\endconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\loadconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\loadconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\responseconditioncontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\responseconditioncontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\nodes\\endconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\nodes\\endconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\loadconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\loadconversationgraphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\idialognode.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\idialognode.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\dialoggraphedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\dialoggraphedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\createnodepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\createnodepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\spawndialognodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\spawndialognodebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\dialogtreeeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -229,10 +237,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\cardsmithdata\\dialog\\responses\\iresponsecondition.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\cardsmithdata\\dialog\\responses\\iresponsecondition.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|c:\\users\\don20\\documents\\godot\\card-smith\\scripts\\dialognodes\\idialognode.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{79D9582E-C3A1-4234-8BD2-1FFC4D676EF9}|CardSmith.csproj|solutionrelative:scripts\\dialognodes\\idialognode.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -242,37 +246,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 327,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 30,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
+              "Title": "CreateNodePopup.cs",
+              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\CreateNodePopup.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\CreateNodePopup.cs",
+              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\CreateNodePopup.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\CreateNodePopup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T18:03:35.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "LoadConversationGraphNode.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\LoadConversationGraphNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\LoadConversationGraphNode.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\LoadConversationGraphNode.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\LoadConversationGraphNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABFAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\LoadConversationGraphNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\LoadConversationGraphNode.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\LoadConversationGraphNode.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\LoadConversationGraphNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-25T22:13:12.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 9,
               "Title": "IDialogNode.cs",
-              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\IDialogNode.cs",
+              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\IDialogNode.cs",
               "RelativeDocumentMoniker": "Scripts\\DialogNodes\\IDialogNode.cs",
-              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\IDialogNode.cs",
+              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\IDialogNode.cs",
               "RelativeToolTip": "Scripts\\DialogNodes\\IDialogNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-25T16:10:06.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ActionManager.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Managers\\ActionManager.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Managers\\ActionManager.cs",
@@ -280,12 +297,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Managers\\ActionManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T15:03:21.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T15:03:21.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "ITriggerAction.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\ITriggerAction.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\ITriggerAction.cs",
@@ -293,12 +309,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\ITriggerAction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T15:02:22.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T15:02:22.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "TriggerActionDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\TriggerActionDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\TriggerActionDialog.cs",
@@ -306,25 +321,23 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\TriggerActionDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T15:01:34.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T15:01:34.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "IResponseCondition.cs",
-              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponseCondition.cs",
+              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponseCondition.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\Responses\\IResponseCondition.cs",
-              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponseCondition.cs",
+              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponseCondition.cs",
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\Responses\\IResponseCondition.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:54:45.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:54:45.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ResponseConditionDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\ResponseConditionDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\ResponseConditionDialog.cs",
@@ -332,12 +345,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\ResponseConditionDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:54:17.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:54:17.343Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ResponseDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\ResponseDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\ResponseDialog.cs",
@@ -345,25 +357,23 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\ResponseDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:42:22.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:42:22.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "IResponse.cs",
-              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponse.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\Responses\\IResponse.cs",
-              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponse.cs",
+              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\Responses\\IResponse.cs",
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\Responses\\IResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:39:31.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:39:31.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ShowResponsesDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\ShowResponsesDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\ShowResponsesDialog.cs",
@@ -371,25 +381,23 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\ShowResponsesDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:36:03.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:36:03.915Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "IEnd.cs",
-              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\IEnd.cs",
+              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\IEnd.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\IEnd.cs",
-              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\IEnd.cs",
+              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\IEnd.cs",
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\IEnd.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:33:59.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:33:59.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "EndDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\EndDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\EndDialog.cs",
@@ -397,12 +405,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\EndDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:33:33.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:33:33.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "SaveDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\SaveDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\SaveDialog.cs",
@@ -410,25 +417,23 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\SaveDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:29:55.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:29:55.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "IStart.cs",
-              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\IStart.cs",
+              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\IStart.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\IStart.cs",
-              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\IStart.cs",
+              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\IStart.cs",
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\IStart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:29:21.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:29:21.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "IShowResponses.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\IShowResponses.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\IShowResponses.cs",
@@ -436,12 +441,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\IShowResponses.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:25:34.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:25:34.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "LoadDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\LoadDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\LoadDialog.cs",
@@ -449,12 +453,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\LoadDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:23:15.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:23:15.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "SayDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\SayDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\SayDialog.cs",
@@ -462,12 +465,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\SayDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:16:23.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:16:23.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "DialogFactory.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\DialogFactory.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\DialogFactory.cs",
@@ -475,25 +477,23 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\DialogFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:09:51.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:09:51.244Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "StartDialog.cs",
-              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\StartDialog.cs",
+              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\StartDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\StartDialog.cs",
-              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\CardSmithData\\Dialog\\StartDialog.cs",
+              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\StartDialog.cs",
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\StartDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:06:04.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:06:04.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "ILoad.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\ILoad.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\ILoad.cs",
@@ -501,12 +501,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\ILoad.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T14:02:07.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T14:02:07.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "IDialog.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\IDialog.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\IDialog.cs",
@@ -514,12 +513,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\IDialog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T13:49:27.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T13:49:27.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "DialogTree.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Dialog\\DialogTree.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Dialog\\DialogTree.cs",
@@ -527,12 +525,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Dialog\\DialogTree.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T13:47:49.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T13:47:49.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "SpawnDialogNodeButton.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\SpawnDialogNodeButton.cs",
               "RelativeDocumentMoniker": "Scripts\\DialogNodes\\SpawnDialogNodeButton.cs",
@@ -540,38 +537,37 @@
               "RelativeToolTip": "Scripts\\DialogNodes\\SpawnDialogNodeButton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T12:30:23.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T12:30:23.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "ResponseConditionControl.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\ResponseConditionControl.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\ResponseConditionControl.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\ResponseConditionControl.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\ResponseConditionControl.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAmwA0AAAAXAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\ResponseConditionControl.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\ResponseConditionControl.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\ResponseConditionControl.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\ResponseConditionControl.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAqwM0AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T21:16:32.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "ResponseVBoxContainer.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\ResponseVBoxContainer.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\ResponseVBoxContainer.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\ResponseVBoxContainer.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\ResponseVBoxContainer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\ResponseVBoxContainer.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\ResponseVBoxContainer.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\ResponseVBoxContainer.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\ResponseVBoxContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T21:16:09.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "DialogTreeEditor.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\DialogTreeEditor.cs",
               "RelativeDocumentMoniker": "Scripts\\DialogNodes\\DialogTreeEditor.cs",
@@ -579,70 +575,69 @@
               "RelativeToolTip": "Scripts\\DialogNodes\\DialogTreeEditor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T14:46:39.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T14:46:39.847Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "SaveConversationGraphNode.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\SaveConversationGraphNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\SaveConversationGraphNode.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\SaveConversationGraphNode.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\SaveConversationGraphNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABFAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\SaveConversationGraphNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\SaveConversationGraphNode.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\SaveConversationGraphNode.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\SaveConversationGraphNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T13:46:27.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "EndConversationGraphNode.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\EndConversationGraphNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\EndConversationGraphNode.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\EndConversationGraphNode.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\EndConversationGraphNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\EndConversationGraphNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\EndConversationGraphNode.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\EndConversationGraphNode.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\EndConversationGraphNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T13:45:12.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "StartConversationGraphNode.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\StartConversationGraphNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\StartConversationGraphNode.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\StartConversationGraphNode.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\StartConversationGraphNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABHAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\StartConversationGraphNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\StartConversationGraphNode.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\StartConversationGraphNode.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\StartConversationGraphNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T13:35:40.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "TriggerActionGraphNode.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\TriggerActionGraphNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\TriggerActionGraphNode.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\TriggerActionGraphNode.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\TriggerActionGraphNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABEAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\TriggerActionGraphNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\TriggerActionGraphNode.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\TriggerActionGraphNode.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\TriggerActionGraphNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-23T13:57:12.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "SayGraphNode.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\SayGraphNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\SayGraphNode.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\SayGraphNode.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\SayGraphNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA6AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\SayGraphNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\SayGraphNode.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\SayGraphNode.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\SayGraphNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-23T13:02:29.711Z",
               "EditorCaption": ""
@@ -655,27 +650,27 @@
               "RelativeDocumentMoniker": "Scripts\\DialogNodes\\DialogGraphEdit.cs",
               "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\DialogGraphEdit.cs",
               "RelativeToolTip": "Scripts\\DialogNodes\\DialogGraphEdit.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAiwJkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAswJkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T17:35:36.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ShowResponsesNode.cs",
-              "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\ShowResponsesNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\ShowResponsesNode.cs",
-              "ToolTip": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DialogNodes\\ShowResponsesNode.cs",
-              "RelativeToolTip": "Scripts\\DialogNodes\\ShowResponsesNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\ShowResponsesNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\DialogNodes\\Nodes\\ShowResponsesNode.cs",
+              "ToolTip": "C:\\USERS\\DON20\\DOCUMENTS\\GODOT\\CARD-SMITH\\Scripts\\DialogNodes\\Nodes\\ShowResponsesNode.cs",
+              "RelativeToolTip": "Scripts\\DialogNodes\\Nodes\\ShowResponsesNode.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T17:05:28.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "BoolStatComponent.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\BoolStatComponent.cs",
               "RelativeDocumentMoniker": "Scripts\\BoolStatComponent.cs",
@@ -687,7 +682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "ContentMarshal.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\ContentMarshal.cs",
               "RelativeDocumentMoniker": "Scripts\\ContentMarshal.cs",
@@ -699,7 +694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "DataManager.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Managers\\DataManager.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Managers\\DataManager.cs",
@@ -707,12 +702,11 @@
               "RelativeToolTip": "Scripts\\CardSmithData\\Managers\\DataManager.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAowJEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T13:05:52.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T13:05:52.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "CreateButton.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CreateButton.cs",
               "RelativeDocumentMoniker": "Scripts\\CreateButton.cs",
@@ -724,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "BaseStats.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Stats\\BaseStats.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Stats\\BaseStats.cs",
@@ -736,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Character\\Character.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Character\\Character.cs",
@@ -748,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "IDManager.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Managers\\IDManager.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Managers\\IDManager.cs",
@@ -760,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "CharacterManager.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Managers\\CharacterManager.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Managers\\CharacterManager.cs",
@@ -772,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "IntStat.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Stats\\IntStat.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Stats\\IntStat.cs",
@@ -784,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "CharacterEditor.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CharacterEditor\\CharacterEditor.cs",
               "RelativeDocumentMoniker": "Scripts\\CharacterEditor\\CharacterEditor.cs",
@@ -796,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "Stat.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Stat.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Stat.cs",
@@ -808,7 +802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "NavigationButton.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\NavigationButton.cs",
               "RelativeDocumentMoniker": "Scripts\\NavigationButton.cs",
@@ -820,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "MainScene.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\MainScene\\MainScene.cs",
               "RelativeDocumentMoniker": "Scripts\\MainScene\\MainScene.cs",
@@ -828,12 +822,11 @@
               "RelativeToolTip": "Scripts\\MainScene\\MainScene.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T13:36:22.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T13:36:22.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "Launcher.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\Launcher\\Launcher.cs",
               "RelativeDocumentMoniker": "Scripts\\Launcher\\Launcher.cs",
@@ -845,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "Scenes.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\Scenes.cs",
               "RelativeDocumentMoniker": "Scripts\\Scenes.cs",
@@ -857,7 +850,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "SceneManager.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\GGC\\SceneManager.cs",
               "RelativeDocumentMoniker": "Scripts\\GGC\\SceneManager.cs",
@@ -869,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "LauncherMarginContainer.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\Launcher\\LauncherMarginContainer.cs",
               "RelativeDocumentMoniker": "Scripts\\Launcher\\LauncherMarginContainer.cs",
@@ -881,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "NewProjectMarginContainer.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\Launcher\\NewProjectMarginContainer.cs",
               "RelativeDocumentMoniker": "Scripts\\Launcher\\NewProjectMarginContainer.cs",
@@ -893,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Globals.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CardSmithData\\Globals.cs",
               "RelativeDocumentMoniker": "Scripts\\CardSmithData\\Globals.cs",
@@ -905,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "HideNavButton.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\MainScene\\HideNavButton.cs",
               "RelativeDocumentMoniker": "Scripts\\MainScene\\HideNavButton.cs",
@@ -917,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "ToggleNavigationButton.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\MainScene\\ToggleNavigationButton.cs",
               "RelativeDocumentMoniker": "Scripts\\MainScene\\ToggleNavigationButton.cs",
@@ -929,7 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "DeleteButton.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\DeleteButton.cs",
               "RelativeDocumentMoniker": "Scripts\\DeleteButton.cs",
@@ -941,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "BucketList.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\BucketList\\BucketList.cs",
               "RelativeDocumentMoniker": "Scripts\\BucketList\\BucketList.cs",
@@ -953,7 +946,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "CreateBucketScreen.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\CreateBucketScreen\\CreateBucketScreen.cs",
               "RelativeDocumentMoniker": "Scripts\\CreateBucketScreen\\CreateBucketScreen.cs",
@@ -965,7 +958,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "Bucket.cs",
               "DocumentMoniker": "C:\\Users\\Don20\\Documents\\Godot\\card-smith\\Scripts\\Bucket.cs",
               "RelativeDocumentMoniker": "Scripts\\Bucket.cs",

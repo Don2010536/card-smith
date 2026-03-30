@@ -36,13 +36,13 @@ public partial class SayGraphNode : GraphNode, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("[+] Building say");
+        LogPanel.Instance.AddMessage("[+] Building say");
         SayDialog dialog = new ();
         dialog.Text = ToSayEdit.Text;
-        GD.Print($"\t[~] Say text: {dialog.Text}");
+        LogPanel.Instance.AddDebug($"\t[~] Say text: {dialog.Text}");
 
         DialogData = dialog;
-        GD.Print("[✓] Built say");
+        LogPanel.Instance.AddSuccess("[✓] Built say");
     }
 
     public void FillConnections()

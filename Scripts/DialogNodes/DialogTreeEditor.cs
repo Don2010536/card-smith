@@ -1,3 +1,5 @@
+using CardSmithData.Dialog;
+using CardSmithData.Dialog.Responses;
 using Godot;
 using System;
 using System.IO;
@@ -89,6 +91,32 @@ public partial class DialogTreeEditor : Control
 
 	public void SaveDialog()
 	{
-		GraphEdit.SaveDialog();
+		DialogTree tree = GraphEdit.SaveDialog();
+
+		CheckTree(tree.EntryPoint);
+	}
+
+	public void CheckTree(IDialog dialog)
+	{
+        LogPanel.Instance.AddMessage($"Node type: {dialog.DialogNodeType}");
+        LogPanel.Instance.AddMessage($"Connections: {dialog.RightConnections.Count}");
+
+		foreach (IDialog connection in dialog.RightConnections)
+		{
+			CheckTree(connection);
+		}
+
+		switch (dialog.DialogNodeType)
+		{
+			case DialogNodeTypes.ShowResponse:
+				foreach (IResponse response in ((ShowResponsesDialog)dialog).Responses)
+				{
+					CheckTree(response);
+                    LogPanel.Instance.AddMessage($"Conditions: {response.Conditions.Count}");
+                }
+				break;
+			default:
+				break;
+		}
 	}
 }

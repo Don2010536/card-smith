@@ -15,20 +15,20 @@ namespace CardSmith.Scripts.DialogNodes.Nodes
         {
             DialogGraphEdit graph = node.GetParent<DialogGraphEdit>();
 
-            GD.Print($"[+] Finding {node.DialogNodeTypes} connection");
+            LogPanel.Instance.AddMessage($"[+] Finding {node.DialogNodeTypes} connection");
 
             IDialog connection = graph.GetConnection(node.Name);
 
             if (connection != null)
             {
-                GD.Print($"\t[~] Connection found from {node.DialogNodeTypes} to {connection.DialogNodeType}");
+                LogPanel.Instance.AddDebug($"\t[~] Connection found from {node.DialogNodeTypes} to {connection.DialogNodeType}");
 
                 node.DialogData.RightConnections.Add(connection);
-                GD.Print("[✓] Connection added");
+                LogPanel.Instance.AddSuccess("[✓] Connection added");
             } 
             else
             {
-                GD.Print($"[x] No connection found for {node.Name} on slot 0");
+                LogPanel.Instance.AddError($"[X] No connection found for {node.Name} on slot 0");
             }
         }
     }

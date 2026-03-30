@@ -23,13 +23,13 @@ public partial class LoadConversationGraphNode : GraphNode, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("[+] Building load");
+        LogPanel.Instance.AddMessage("[+] Building load");
         DialogData = new LoadDialog();
-        GD.Print("[✓] Built load");
+        LogPanel.Instance.AddSuccess("[✓] Built load");
     }
 
     public void FillConnections()
     {
-        GD.Print("[✓] Load node doesn't have a connection on the right");
+        LogPanel.Instance.AddSuccess("[✓] Load node doesn't have a connection on the right");
     }
 }

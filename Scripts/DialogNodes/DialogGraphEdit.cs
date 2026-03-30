@@ -144,12 +144,9 @@ public partial class DialogGraphEdit : GraphEdit
     {
         DialogTree tree = new ();
 
-        if (ValidateTree())
+        if (!ValidateTree())
         {
-            GD.Print("Tree good");
-        } else
-        {
-            GD.Print("Tree bad");
+            return null;
         }
 
         Dictionary<string, IDialogNode> nodeMap = [];
@@ -222,7 +219,7 @@ public partial class DialogGraphEdit : GraphEdit
 
         if (!state)
         {
-            GD.Print("Missing 'Start Conversation' node");
+            LogPanel.Instance.AddError("Missing 'Start Conversation' node");
         }
 
         return state;

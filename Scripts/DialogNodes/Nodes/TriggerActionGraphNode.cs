@@ -101,7 +101,7 @@ public partial class TriggerActionGraphNode : GraphNode, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("[+] Building trigger action");
+        LogPanel.Instance.AddMessage("[+] Building trigger action");
         TriggerActionDialog triggerAction = new();
 
         foreach (var entry in DataManager.Instance.ActionManager.Actions)
@@ -109,13 +109,13 @@ public partial class TriggerActionGraphNode : GraphNode, IDialogNode
             if (entry.Value == ActionsSelector.Text)
             {
                 triggerAction.ActionID = entry.Key;
-                GD.Print($"\t[~] Action {triggerAction.ActionID}:{entry.Value}");
+                LogPanel.Instance.AddDebug($"\t[~] Action {triggerAction.ActionID}:{entry.Value}");
                 break;
             }
         }
 
         DialogData = triggerAction;
-        GD.Print("[✓] Built trigger action");
+        LogPanel.Instance.AddSuccess("[✓] Built trigger action");
     }
 
     public void FillConnections()

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://rkctfinqlls1" path="res://Scripts/MainScene/HideNavButton.cs" id="4_maf8m"]
 [ext_resource type="Script" uid="uid://bblixh4b5xk1h" path="res://Scripts/NavigationButton.cs" id="6_6ev3c"]
 [ext_resource type="Script" uid="uid://dm8tvsbr8hjli" path="res://Scripts/MainScene/SaveProjectButton.cs" id="7_maf8m"]
+[ext_resource type="Script" uid="uid://dtdj7h8q8krbu" path="res://Scripts/MainScene/LogPanel.cs" id="9_m1efj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huasi"]
 bg_color = Color(0.101960786, 0.101960786, 0.11764706, 1)
@@ -19,16 +20,21 @@ region = Rect2(0, 200, 50, 50)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mai8y"]
 bg_color = Color(0.07058824, 0.07058824, 0.078431375, 1)
 border_width_right = 2
-border_color = Color(0.13333334, 0.13333334, 0.14509805, 1)
+border_color = Color(0.16078432, 0.16078432, 0.1764706, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76v2p"]
 atlas = ExtResource("2_iacmt")
 region = Rect2(50, 0, 50, 50)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drdnd"]
-bg_color = Color(0.13333334, 0.13333334, 0.14509805, 1)
-expand_margin_left = 4.0
-expand_margin_right = 4.0
+bg_color = Color(0.16078432, 0.16078432, 0.1764706, 1)
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1efj"]
+bg_color = Color(0.07058824, 0.07058824, 0.078431375, 1)
+border_width_left = 2
+border_color = Color(0.16078432, 0.16078432, 0.1764706, 1)
 
 [sub_resource type="Animation" id="Animation_ioaeq"]
 resource_name = "HideNav"
@@ -36,7 +42,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:position")
+tracks/0/path = NodePath("NavigationPanel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -51,7 +57,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:position")
+tracks/0/path = NodePath("NavigationPanel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -60,6 +66,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-400, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LogPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1920, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_lhp3t"]
 resource_name = "ShowNav"
@@ -67,7 +85,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:position")
+tracks/0/path = NodePath("NavigationPanel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -150,7 +168,7 @@ icon = SubResource("AtlasTexture_m1efj")
 script = ExtResource("3_6ev3c")
 Animator = NodePath("../../../AnimationPlayer")
 
-[node name="Panel" type="Panel" parent="." unique_id=1094545046]
+[node name="NavigationPanel" type="Panel" parent="." unique_id=1094545046]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 1
 anchors_preset = 9
@@ -159,7 +177,7 @@ offset_left = -400.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mai8y")
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=373376353]
+[node name="MarginContainer" type="MarginContainer" parent="NavigationPanel" unique_id=373376353]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -171,17 +189,17 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=505006648]
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer" unique_id=505006648]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1562338016]
+[node name="Label" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer" unique_id=1562338016]
 custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
 text = "Navigation"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HideNavButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/Label" unique_id=1795856313 node_paths=PackedStringArray("Animator", "ToggleNavButton")]
+[node name="HideNavButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/Label" unique_id=1795856313 node_paths=PackedStringArray("Animator", "ToggleNavButton")]
 custom_minimum_size = Vector2(55, 55)
 layout_mode = 0
 offset_right = 40.0
@@ -191,94 +209,94 @@ script = ExtResource("4_maf8m")
 Animator = NodePath("../../../../../AnimationPlayer")
 ToggleNavButton = NodePath("../../../../../Main/MarginContainer/ToggleNavigationButton")
 
-[node name="Panel" type="Panel" parent="Panel/MarginContainer/VBoxContainer" unique_id=1124089599]
+[node name="Panel" type="Panel" parent="NavigationPanel/MarginContainer/VBoxContainer" unique_id=1124089599]
 custom_minimum_size = Vector2(0, 2)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_drdnd")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=346896914]
+[node name="ScrollContainer" type="ScrollContainer" parent="NavigationPanel/MarginContainer/VBoxContainer" unique_id=346896914]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=2142509845]
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=2142509845]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="BucketsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1595825923]
+[node name="BucketsContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1595825923]
 layout_mode = 2
 
-[node name="BucketsLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=1754047998]
+[node name="BucketsLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=1754047998]
 layout_mode = 2
 text = "Buckets"
 horizontal_alignment = 1
 
-[node name="BucketCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=37202832]
+[node name="BucketCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=37202832]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Bucket Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 2
 
-[node name="BucketEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=400163039]
+[node name="BucketEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=400163039]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Bucket Editor"
 
-[node name="StatsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1163100181]
+[node name="StatsContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1163100181]
 layout_mode = 2
 
-[node name="StatsLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=1127537574]
+[node name="StatsLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=1127537574]
 layout_mode = 2
 text = "Stats"
 horizontal_alignment = 1
 
-[node name="StatEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=2142418793]
+[node name="StatEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=2142418793]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Stat Editor"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 3
 
-[node name="ConditionsCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=130885390]
+[node name="ConditionsCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=130885390]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Conditions Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 6
 
-[node name="CharacterContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1011220436]
+[node name="CharacterContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1011220436]
 layout_mode = 2
 
-[node name="CharacterLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1078959260]
+[node name="CharacterLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1078959260]
 layout_mode = 2
 text = "Characters"
 horizontal_alignment = 1
 
-[node name="CharacterCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=673125596]
+[node name="CharacterCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=673125596]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Character Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 4
 
-[node name="CharacterEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1785572488]
+[node name="CharacterEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1785572488]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Character Editor"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 5
 
-[node name="DialogCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1604236885]
+[node name="DialogCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1604236885]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Dialog Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 8
 
-[node name="DialogEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=76300037]
+[node name="DialogEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=76300037]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 disabled = true
@@ -286,46 +304,106 @@ text = "Dialog Editor"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 5
 
-[node name="CardContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=812999319]
+[node name="CardContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=812999319]
 layout_mode = 2
 
-[node name="CardLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=487347482]
+[node name="CardLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=487347482]
 layout_mode = 2
 text = "Cards"
 horizontal_alignment = 1
 
-[node name="CardCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=2138095784]
+[node name="CardCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=2138095784]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Card Creator"
 
-[node name="CardEditorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1743749241]
+[node name="CardEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1743749241]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Card Editor"
 
-[node name="TagCreatorButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1451553398]
+[node name="TagCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1451553398]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Tag Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 7
 
-[node name="ExportContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=477443632]
+[node name="ExportContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=477443632]
 layout_mode = 2
 
-[node name="ExportLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1022631979]
+[node name="ExportLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1022631979]
 layout_mode = 2
 text = "Export/Save"
 horizontal_alignment = 1
 
-[node name="SaveProjectButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1772195004]
+[node name="SaveProjectButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1772195004]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Save Project"
 script = ExtResource("7_maf8m")
+
+[node name="LogPanel" type="Panel" parent="." unique_id=481710134 node_paths=PackedStringArray("LogTxt")]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 400.00024
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m1efj")
+script = ExtResource("9_m1efj")
+LogTxt = NodePath("MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/RichTextLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="LogPanel" unique_id=1978519691]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LogPanel/MarginContainer" unique_id=563362626]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LogPanel/MarginContainer/VBoxContainer" unique_id=1631681811]
+layout_mode = 2
+text = "Log"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="LogPanel/MarginContainer/VBoxContainer" unique_id=140863548]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_drdnd")
+
+[node name="MarginContainer" type="MarginContainer" parent="LogPanel/MarginContainer/VBoxContainer" unique_id=984445801]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="LogPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=171920255]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LogPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=1928280636]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LogPanel/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer" unique_id=359769181]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=376770139]
 libraries/ = SubResource("AnimationLibrary_gnsmo")

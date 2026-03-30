@@ -24,9 +24,9 @@ public partial class SaveConversationGraphNode : GraphNode, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("[+] Building save");
+        LogPanel.Instance.AddMessage("[+] Building save");
         DialogData = new SaveDialog();
-        GD.Print("[✓] Built save");
+        LogPanel.Instance.AddSuccess("[✓] Built save");
     }
 
     public void FillConnections()

@@ -24,9 +24,9 @@ public partial class StartConversationGraphNode : GraphNode, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("[+] Building start");
+        LogPanel.Instance.AddMessage("[+] Building start");
         DialogData = new StartDialog();
-        GD.Print("[✓] Built start");
+        LogPanel.Instance.AddSuccess("[✓] Built start");
     }
 
     public void FillConnections()

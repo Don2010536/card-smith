@@ -87,29 +87,29 @@ public partial class ResponseVBoxContainer : VBoxContainer, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("\t[+] Building response");
+        LogPanel.Instance.AddMessage("\t[+] Building response");
         ResponseDialog dialog = new();
         
         dialog.RespnseText = ResponseEdit.Text;
-        GD.Print($"\t\t[~] Response text {dialog.RespnseText}");
+        LogPanel.Instance.AddDebug($"\t\t[~] Response text {dialog.RespnseText}");
 
         dialog.LogicalOperator = textToOperatorMap[LogicalSelector.Text];
-        GD.Print($"\t\t[~] Response condition operator {dialog.LogicalOperator}");
+        LogPanel.Instance.AddDebug($"\t\t[~] Response condition operator {dialog.LogicalOperator}");
 
         foreach (ResponseConditionControl control in ResponseConditionVBox.GetChildren().Cast<ResponseConditionControl>())
         {
             control.BuildDialog();
 
             dialog.Conditions.Add((IResponseCondition)control.DialogData);
-            GD.Print($"\t\t[~] Added response condition to response");
+            LogPanel.Instance.AddDebug($"\t\t[~] Added response condition to response");
         }
 
         DialogData = dialog;
-        GD.Print("\t[✓] Built response");
+        LogPanel.Instance.AddSuccess("\t[✓] Built response");
     }
 
     public void FillConnections()
     {
-        GD.Print("[X] Calling FillConnections() on response directly should not be done!");
+        LogPanel.Instance.AddError("[X] Calling FillConnections() on response directly should not be done!");
     }
 }

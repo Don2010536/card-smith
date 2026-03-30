@@ -186,15 +186,18 @@ public partial class ResponseConditionControl : MarginContainer, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("\t\t[+] Building response condition");
+        LogPanel.Instance.AddMessage("\t\t[+] Building response condition");
         ResponseConditionDialog responseCondition = new ResponseConditionDialog();
         string key = StatSelector.GetItemText(StatSelector.Selected);
 
+        responseCondition.StatKey = key;
+        LogPanel.Instance.AddDebug($"\t\t\t[~] Comparison stat key: {responseCondition.StatKey}");
+
         responseCondition.StatType = statMap[key].statType;
-        GD.Print($"\t\t\t[~] Comparison stat type: {responseCondition.StatType}");
+        LogPanel.Instance.AddDebug($"\t\t\t[~] Comparison stat type: {responseCondition.StatType}");
 
         responseCondition.ComparissonType = comparrisonMap[ComparrisonSelector.GetItemText(ComparrisonSelector.Selected)];
-        GD.Print($"\t\t\t[~] Comparison type: {responseCondition.ComparissonType}");
+        LogPanel.Instance.AddDebug($"\t\t\t[~] Comparison type: {responseCondition.ComparissonType}");
 
         switch (responseCondition.StatType)
         {
@@ -208,17 +211,17 @@ public partial class ResponseConditionControl : MarginContainer, IDialogNode
                 responseCondition.ComparrisonValue = TrueFalseSelector.ButtonPressed.ToString();
                 break;
         }
-        GD.Print($"\t\t\t[~] Comparison value: {responseCondition.ComparrisonValue}");
+        LogPanel.Instance.AddDebug($"\t\t\t[~] Comparison value: {responseCondition.ComparrisonValue}");
 
         responseCondition.CustomStatUsed = statMap[key].custom;
-        GD.Print($"\t\t\t[~] Custom stat used: {responseCondition.CustomStatUsed}");
+        LogPanel.Instance.AddDebug($"\t\t\t[~] Custom stat used: {responseCondition.CustomStatUsed}");
 
         DialogData = responseCondition;
-        GD.Print($"\t\t[✓] Built response condition");
+        LogPanel.Instance.AddSuccess($"\t\t[✓] Built response condition");
     }
 
     public void FillConnections()
     {
-        GD.Print("[✓] Response condition does not have connections");
+        LogPanel.Instance.AddSuccess("[✓] Response condition does not have connections");
     }
 }

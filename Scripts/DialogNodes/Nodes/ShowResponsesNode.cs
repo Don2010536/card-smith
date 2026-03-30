@@ -76,7 +76,7 @@ public partial class ShowResponsesNode : GraphNode, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("[+] Building show responses");
+        LogPanel.Instance.AddMessage("[+] Building show responses");
         ShowResponsesDialog showResponses = new();
 
         foreach (Control response in GetChildren())
@@ -86,12 +86,12 @@ public partial class ShowResponsesNode : GraphNode, IDialogNode
                 ((ResponseVBoxContainer)response).BuildDialog();
 
                 showResponses.Responses.Add((IResponse)((ResponseVBoxContainer)response).DialogData);
-                GD.Print("\t[~] Added response to show responses");
+                LogPanel.Instance.AddDebug("\t[~] Added response to show responses");
             }
         }
 
         DialogData = showResponses;
-        GD.Print("[✓] Built show responses");
+        LogPanel.Instance.AddSuccess("[✓] Built show responses");
     }
 
     public void FillConnections()
@@ -99,31 +99,31 @@ public partial class ShowResponsesNode : GraphNode, IDialogNode
         IDialog connection;
         int slot = 0;
         DialogGraphEdit graph = GetParent<DialogGraphEdit>();
-        GD.Print($"[+] Finding {DialogNodeTypes} connection");
+        LogPanel.Instance.AddMessage($"[+] Finding {DialogNodeTypes} connection");
 
 
         foreach (Control response in GetChildren())
         {
             if (response.GetType() == typeof(ResponseVBoxContainer))
             {
-                GD.Print($"\t[~] Looking for connection from {Name} on slot {slot}");
+                LogPanel.Instance.AddDebug($"\t[~] Looking for connection from {Name} on slot {slot}");
                 connection = graph.GetConnection(Name, slot);
 
                 if (connection != null)
                 {
-                    GD.Print($"\t[~] Connection found from {DialogNodeTypes} to {connection.DialogNodeType}");
+                    LogPanel.Instance.AddDebug($"\t[~] Connection found from {DialogNodeTypes} to {connection.DialogNodeType}");
 
                     ((ResponseVBoxContainer)response).DialogData.RightConnections.Add(connection);
-                    GD.Print($"\t[~] Added connection to response");
+                    LogPanel.Instance.AddDebug($"\t[~] Added connection to response");
                 } else
                 {
-                    GD.Print($"\t[x] No connection from {Name} on slot {slot} this will end the conversation if if selected");
+                    LogPanel.Instance.AddError($"\t[X] No connection from {Name} on slot {slot} this will end the conversation if if selected");
                 }
                 
                 slot++;
             }
         }
 
-        GD.Print("[✓] Connections added");
+        LogPanel.Instance.AddSuccess("[✓] Connections added");
     }
 }

@@ -20,14 +20,14 @@ public partial class EndConversationGraphNode : GraphNode, IDialogNode
 
     public void BuildDialog()
     {
-        GD.Print("[+] Building end node");
+        LogPanel.Instance.AddMessage("[+] Building end node");
         DialogData = new EndDialog();
-        GD.Print("[✓] Built end node");
+        LogPanel.Instance.AddSuccess("[✓] Built end node");
     }
 
     public void FillConnections()
     {
-        GD.Print("[✓] End node doesn't have a connection on the right");
+        LogPanel.Instance.AddSuccess("[✓] End node doesn't have a connection on the right");
     }
 
     public void SaveNode(ref BinaryWriter writer)
