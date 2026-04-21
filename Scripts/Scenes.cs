@@ -12,6 +12,7 @@ public enum TSCN
     ConditionsCreator,
     TagCreator,
     DialogTreeEditor,
+    DialogTreeSelector,
 }
 
 public class Scenes : IMap<TSCN, string>
@@ -27,5 +28,6 @@ public class Scenes : IMap<TSCN, string>
         { TSCN.ConditionsCreator, "conditions_creator" },
         { TSCN.TagCreator, "tag_creator" },
         { TSCN.DialogTreeEditor, "dialog_tree_editor" },
+        { TSCN.DialogTreeSelector, "tree_selector" },
     };
 }

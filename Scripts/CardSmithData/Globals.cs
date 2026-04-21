@@ -15,6 +15,7 @@ public class Globals
     //Paths
     public static string CHARACTERSP => $"{CombinedPath}/Characters";
     public static string DIALOGTREEP => $"{CombinedPath}/Dialog/Trees";
+    public static string DIALOGTREE_DATAP => $"{CombinedPath}/Dialog/Data";
     public const string SCENESP = "res://Scenes";
 
     //Files

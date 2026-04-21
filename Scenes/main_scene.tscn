@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://bblixh4b5xk1h" path="res://Scripts/NavigationButton.cs" id="6_6ev3c"]
 [ext_resource type="Script" uid="uid://dm8tvsbr8hjli" path="res://Scripts/MainScene/SaveProjectButton.cs" id="7_maf8m"]
 [ext_resource type="Script" uid="uid://dtdj7h8q8krbu" path="res://Scripts/MainScene/LogPanel.cs" id="9_m1efj"]
+[ext_resource type="Script" uid="uid://c7a1q6rntjy2r" path="res://Scripts/MainScene/Saving.cs" id="10_mai8y"]
+[ext_resource type="Script" uid="uid://dnui0nsdufg2c" path="res://Scripts/MainScene/Error.cs" id="11_76v2p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huasi"]
 bg_color = Color(0.101960786, 0.101960786, 0.11764706, 1)
@@ -100,6 +102,96 @@ _data = {
 &"HideNav": SubResource("Animation_ioaeq"),
 &"RESET": SubResource("Animation_7ewk0"),
 &"ShowNav": SubResource("Animation_lhp3t")
+}
+
+[sub_resource type="Animation" id="Animation_76v2p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["SAVING   "]
+}
+
+[sub_resource type="Animation" id="Animation_drdnd"]
+resource_name = "Saving"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["SAVING   ", "SAVING.  ", "SAVING.. ", "SAVING..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ioaeq"]
+_data = {
+&"RESET": SubResource("Animation_76v2p"),
+&"Saving": SubResource("Animation_drdnd")
+}
+
+[sub_resource type="Animation" id="Animation_gnsmo"]
+resource_name = "HideSave"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1080)]
+}
+
+[sub_resource type="Animation" id="Animation_psl12"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1080)]
+}
+
+[sub_resource type="Animation" id="Animation_2ebs2"]
+resource_name = "ShowSave"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1080), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oyb3p"]
+_data = {
+&"HideSave": SubResource("Animation_gnsmo"),
+&"RESET": SubResource("Animation_psl12"),
+&"ShowSave": SubResource("Animation_2ebs2")
 }
 
 [node name="MainScene" type="Control" unique_id=1120797180 node_paths=PackedStringArray("Main")]
@@ -299,10 +391,9 @@ SceneToLoad = 8
 [node name="DialogEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=76300037]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-disabled = true
 text = "Dialog Editor"
 script = ExtResource("6_6ev3c")
-SceneToLoad = 5
+SceneToLoad = 9
 
 [node name="CardContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=812999319]
 layout_mode = 2
@@ -407,3 +498,116 @@ scroll_following = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=376770139]
 libraries/ = SubResource("AnimationLibrary_gnsmo")
+
+[node name="Saving" type="ColorRect" parent="." unique_id=1992632532 node_paths=PackedStringArray("SaveTextAnimator", "SaveAnimator")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1080.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7019608)
+script = ExtResource("10_mai8y")
+SaveTextAnimator = NodePath("MarginContainer/MarginContainer/SaveText/SaveTextAnimator")
+SaveAnimator = NodePath("SavingAnimator")
+
+[node name="MarginContainer" type="MarginContainer" parent="Saving" unique_id=1470924220]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Saving/MarginContainer" unique_id=1524342120]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Saving/MarginContainer" unique_id=1406385686]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="SaveText" type="Label" parent="Saving/MarginContainer/MarginContainer" unique_id=531568584]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "SAVING   "
+
+[node name="SaveTextAnimator" type="AnimationPlayer" parent="Saving/MarginContainer/MarginContainer/SaveText" unique_id=1560021756]
+libraries/ = SubResource("AnimationLibrary_ioaeq")
+
+[node name="SavingAnimator" type="AnimationPlayer" parent="Saving" unique_id=3029211]
+libraries/ = SubResource("AnimationLibrary_oyb3p")
+
+[node name="Error" type="ColorRect" parent="." unique_id=89797372 node_paths=PackedStringArray("ErrorTxt", "OkButton")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7019608)
+script = ExtResource("11_76v2p")
+ErrorTxt = NodePath("MarginContainer/MarginContainer/VBoxContainer/ErrorText")
+OkButton = NodePath("MarginContainer/MarginContainer/VBoxContainer/MarginContainer/OkButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="Error" unique_id=1094070980]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Error/MarginContainer" unique_id=937123702]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Error/MarginContainer" unique_id=512067133]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Error/MarginContainer/MarginContainer" unique_id=1534130034]
+layout_mode = 2
+
+[node name="ErrorHeader" type="Label" parent="Error/MarginContainer/MarginContainer/VBoxContainer" unique_id=1448409641]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85490197, 0.24313726, 0.26666668, 1)
+text = "ERROR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ErrorText" type="Label" parent="Error/MarginContainer/MarginContainer/VBoxContainer" unique_id=1192414945]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Error/MarginContainer/MarginContainer/VBoxContainer" unique_id=317435512]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="OkButton" type="Button" parent="Error/MarginContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1166229522]
+layout_mode = 2
+text = "OK"

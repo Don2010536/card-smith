@@ -22,11 +22,12 @@ public partial class DialogTreeEditor : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Filename = "test_dialog_4";// ContentMarshal.DialogFile;
+		Filename = ContentMarshal.DialogFile;
 
 		if (Filename != "")
 		{
 			LoadTree();
+			ContentMarshal.DialogFile = "";
 		}
 
         FilenameLabel.Text = Filename;
@@ -48,8 +49,10 @@ public partial class DialogTreeEditor : Control
 		}
 		else
 		{
-			//SaveTree();
+			Saving.Instance.ShowSave();
+			SaveTree();
 			SaveDialog();
+			Saving.Instance.HideSave();
 		}
     }
 
@@ -93,30 +96,10 @@ public partial class DialogTreeEditor : Control
 	{
 		DialogTree tree = GraphEdit.SaveDialog();
 
-		CheckTree(tree.EntryPoint);
-	}
+		if (tree is null) return;
 
-	public void CheckTree(IDialog dialog)
-	{
-        LogPanel.Instance.AddMessage($"Node type: {dialog.DialogNodeType}");
-        LogPanel.Instance.AddMessage($"Connections: {dialog.RightConnections.Count}");
+		tree.Name = Filename;
 
-		foreach (IDialog connection in dialog.RightConnections)
-		{
-			CheckTree(connection);
-		}
-
-		switch (dialog.DialogNodeType)
-		{
-			case DialogNodeTypes.ShowResponse:
-				foreach (IResponse response in ((ShowResponsesDialog)dialog).Responses)
-				{
-					CheckTree(response);
-                    LogPanel.Instance.AddMessage($"Conditions: {response.Conditions.Count}");
-                }
-				break;
-			default:
-				break;
-		}
+		DataManager.Instance.SaveDialogTree(tree);
 	}
 }

@@ -220,6 +220,7 @@ public partial class DialogGraphEdit : GraphEdit
         if (!state)
         {
             LogPanel.Instance.AddError("Missing 'Start Conversation' node");
+            Error.Instance.ShowError("Missing 'Start Conversation' node");
         }
 
         return state;

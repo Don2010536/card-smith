@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ctj57ggwg58md"]
+
+[ext_resource type="Script" uid="uid://ca2i08kxe42a1" path="res://Scripts/TreeSelectorButton.cs" id="1_yd15q"]
+[ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="2_yd15q"]
+[ext_resource type="Script" uid="uid://b46u2foa7or67" path="res://Scripts/TreeButton.cs" id="3_iceig"]
+[ext_resource type="PackedScene" uid="uid://bkq5geu8cw24o" path="res://Prefabs/delete_button.tscn" id="3_mlgn2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iceig"]
+atlas = ExtResource("2_yd15q")
+region = Rect2(150, 250, 50, 50)
+
+[node name="TreeSelectorButton" type="HBoxContainer" unique_id=1019668984 node_paths=PackedStringArray("Button")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yd15q")
+Button = NodePath("TreeButton")
+
+[node name="TreeButton" type="Button" parent="." unique_id=1098238245 node_paths=PackedStringArray("DeleteButton")]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tree Name"
+icon = SubResource("AtlasTexture_iceig")
+alignment = 0
+script = ExtResource("3_iceig")
+DeleteButton = NodePath("../DeleteButton")
+
+[node name="DeleteButton" parent="." unique_id=2086522454 node_paths=PackedStringArray("Parent") instance=ExtResource("3_mlgn2")]
+layout_mode = 2
+Parent = NodePath("..")

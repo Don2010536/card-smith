@@ -1,3 +1,4 @@
+using CardSmithData.Dialog;
 using GGC.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -159,5 +160,15 @@ public class DataManager
     {
         Save($"{ProjectDir}/{DefaultsDir}/{BaseStatsFile}", BaseStats);
         SaveIDs();
+    }
+
+    public void SaveDialogTree(DialogTree tree)
+    {
+        if (!Directory.Exists(Globals.DIALOGTREE_DATAP))
+        {
+            Directory.CreateDirectory(Globals.DIALOGTREE_DATAP);
+        }
+
+        Save($"{Globals.DIALOGTREE_DATAP}/{tree.Name}.diag", tree);
     }
 }

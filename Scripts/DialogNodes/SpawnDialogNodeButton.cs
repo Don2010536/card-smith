@@ -17,6 +17,7 @@ public partial class SpawnDialogNodeButton : Button
 
     private void SpawnDialogNodeButton_Pressed()
     {
+        LogPanel.Instance.AddMessage($"Creating: {DialogNodeScene.ResourcePath}");
         GraphNode node = DialogNodeScene.Instantiate<GraphNode>();
 
         Graph.AddChild(node);
