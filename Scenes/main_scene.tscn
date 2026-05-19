@@ -310,127 +310,143 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_drdnd")
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=2142509845]
+[node name="MarginContainer" type="MarginContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=771588455]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=2142509845]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="BucketsContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1595825923]
+[node name="BucketsContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1595825923]
 layout_mode = 2
 
-[node name="BucketsLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=1754047998]
+[node name="BucketsLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BucketsContainer" unique_id=1754047998]
 layout_mode = 2
 text = "Buckets"
 horizontal_alignment = 1
 
-[node name="BucketCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=37202832]
+[node name="BucketCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BucketsContainer" unique_id=37202832]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Bucket Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 2
 
-[node name="BucketEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/BucketsContainer" unique_id=400163039]
+[node name="BucketEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BucketsContainer" unique_id=400163039]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Bucket Editor"
 
-[node name="StatsContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1163100181]
+[node name="StatsContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1163100181]
 layout_mode = 2
 
-[node name="StatsLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=1127537574]
+[node name="StatsLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/StatsContainer" unique_id=1127537574]
 layout_mode = 2
 text = "Stats"
 horizontal_alignment = 1
 
-[node name="StatEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=2142418793]
+[node name="StatEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/StatsContainer" unique_id=2142418793]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Stat Editor"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 3
 
-[node name="ConditionsCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/StatsContainer" unique_id=130885390]
+[node name="ConditionsCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/StatsContainer" unique_id=130885390]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Conditions Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 6
 
-[node name="CharacterContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1011220436]
+[node name="CharacterContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1011220436]
 layout_mode = 2
 
-[node name="CharacterLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1078959260]
+[node name="CharacterLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CharacterContainer" unique_id=1078959260]
 layout_mode = 2
 text = "Characters"
 horizontal_alignment = 1
 
-[node name="CharacterCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=673125596]
+[node name="CharacterCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CharacterContainer" unique_id=673125596]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Character Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 4
 
-[node name="CharacterEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1785572488]
+[node name="CharacterEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CharacterContainer" unique_id=1785572488]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Character Editor"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 5
 
-[node name="DialogCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=1604236885]
+[node name="DialogCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CharacterContainer" unique_id=1604236885]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Dialog Creator"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 8
 
-[node name="DialogEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CharacterContainer" unique_id=76300037]
+[node name="DialogEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CharacterContainer" unique_id=76300037]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Dialog Editor"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 9
 
-[node name="CardContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=812999319]
+[node name="CardContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=812999319]
 layout_mode = 2
 
-[node name="CardLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=487347482]
+[node name="CardLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CardContainer" unique_id=487347482]
 layout_mode = 2
 text = "Cards"
 horizontal_alignment = 1
 
-[node name="CardCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=2138095784]
+[node name="CardCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CardContainer" unique_id=2138095784]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Card Creator"
 
-[node name="CardEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1743749241]
+[node name="CardEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CardContainer" unique_id=1743749241]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Card Editor"
 
-[node name="TagCreatorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/CardContainer" unique_id=1451553398]
+[node name="TagEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CardContainer" unique_id=1451553398]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Tag Creator"
+text = "Tag Editor"
 script = ExtResource("6_6ev3c")
 SceneToLoad = 7
 
-[node name="ExportContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=477443632]
+[node name="SchoolEditorButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/CardContainer" unique_id=423352624]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "School Editor"
+script = ExtResource("6_6ev3c")
+SceneToLoad = 7
+
+[node name="ExportContainer" type="VBoxContainer" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=477443632]
 layout_mode = 2
 
-[node name="ExportLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1022631979]
+[node name="ExportLabel" type="Label" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/ExportContainer" unique_id=1022631979]
 layout_mode = 2
 text = "Export/Save"
 horizontal_alignment = 1
 
-[node name="SaveProjectButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/ExportContainer" unique_id=1772195004]
+[node name="SaveProjectButton" type="Button" parent="NavigationPanel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/ExportContainer" unique_id=1772195004]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Save Project"
