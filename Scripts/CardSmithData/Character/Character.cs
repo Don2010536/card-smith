@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GGC.Interfaces;
 
-public class Character : ICharacter
+public class Character : ICharacter, ISavable, ILoadable
 {
     public int Id { get; set; }
 

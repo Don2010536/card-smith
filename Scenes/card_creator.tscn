@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbpyynwjdfv1y"]
 
 [ext_resource type="Theme" uid="uid://7t8dn30p7yws" path="res://Resources/main_theme.tres" id="1_xyn4t"]
+[ext_resource type="Script" uid="uid://nq3jdhmv217m" path="res://Scripts/CardEditor/CardCreator.cs" id="2_5ptrf"]
 [ext_resource type="Texture2D" uid="uid://ilsgb2ucgaa3" path="res://Assets/sheet_white1x.png" id="2_6t4o8"]
 [ext_resource type="Texture2D" uid="uid://bqoqpfyk0oknj" path="res://Assets/expanded_white1x.png" id="3_6t4o8"]
 
@@ -24,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xyn4t")
+script = ExtResource("2_5ptrf")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1963913516]
 layout_mode = 1
@@ -103,42 +105,74 @@ min_value = -1.0
 value = -1.0
 rounded = true
 
-[node name="ReqMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1629516442]
+[node name="DescriptionMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1629516442]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer" unique_id=1737282037]
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DescriptionMarginContainer" unique_id=1737282037]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer" unique_id=215306238]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DescriptionMarginContainer" unique_id=215306238]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer" unique_id=1653536526]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DescriptionMarginContainer/MarginContainer" unique_id=1653536526]
 layout_mode = 2
 
-[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer" unique_id=1346370660]
+[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DescriptionMarginContainer/MarginContainer/VBoxContainer" unique_id=1346370660]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=1376481002]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DescriptionMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=1376481002]
+layout_mode = 2
+text = "Description"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DescriptionMarginContainer/MarginContainer/VBoxContainer" unique_id=708989460]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+placeholder_text = "Description..."
+
+[node name="ReqMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1555887601]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer" unique_id=1946334544]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer" unique_id=1354125168]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer" unique_id=1613208583]
+layout_mode = 2
+
+[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer" unique_id=112561366]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=1296787869]
 layout_mode = 2
 text = "Requirements"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=728287151]
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=1220841623]
 layout_mode = 2
 size_flags_horizontal = 8
 icon = SubResource("AtlasTexture_m46d2")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer" unique_id=1950192629]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer" unique_id=1383249510]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1730817521]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ReqMarginContainer/MarginContainer/VBoxContainer/ScrollContainer" unique_id=661992615]
 layout_mode = 2
 
 [node name="SchoolsMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1433036052]
@@ -187,34 +221,130 @@ item_count = 1
 popup/item_0/text = "None"
 popup/item_0/id = 0
 
-[node name="TagsMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1096759469]
+[node name="DesignatorsMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1096759469]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer" unique_id=29884669]
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DesignatorsMarginContainer" unique_id=29884669]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer" unique_id=1643786713]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DesignatorsMarginContainer" unique_id=1643786713]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer" unique_id=827085248]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DesignatorsMarginContainer/MarginContainer" unique_id=827085248]
 layout_mode = 2
 
-[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer/VBoxContainer" unique_id=861279638]
+[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DesignatorsMarginContainer/MarginContainer/VBoxContainer" unique_id=861279638]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=791419407]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DesignatorsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=791419407]
+layout_mode = 2
+text = "Designators"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DesignatorsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=688183977]
+layout_mode = 2
+size_flags_horizontal = 8
+icon = SubResource("AtlasTexture_6t4o8")
+
+[node name="KeywordsMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=611198754]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/KeywordsMarginContainer" unique_id=889416756]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/KeywordsMarginContainer" unique_id=1532538188]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/KeywordsMarginContainer/MarginContainer" unique_id=470110763]
+layout_mode = 2
+
+[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/KeywordsMarginContainer/MarginContainer/VBoxContainer" unique_id=1832065893]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/KeywordsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=1367345053]
+layout_mode = 2
+text = "Keywords"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/KeywordsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=2142202154]
+layout_mode = 2
+size_flags_horizontal = 8
+icon = SubResource("AtlasTexture_6t4o8")
+
+[node name="TagsMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1607201623]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer" unique_id=1435526535]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer" unique_id=190001641]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer" unique_id=1625770056]
+layout_mode = 2
+
+[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer/VBoxContainer" unique_id=2009844375]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=1633912290]
 layout_mode = 2
 text = "Tags"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=688183977]
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TagsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=200066575]
+layout_mode = 2
+size_flags_horizontal = 8
+icon = SubResource("AtlasTexture_6t4o8")
+
+[node name="EffectsMarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1744719711]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/EffectsMarginContainer" unique_id=103009897]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/EffectsMarginContainer" unique_id=1177640993]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/EffectsMarginContainer/MarginContainer" unique_id=1558087934]
+layout_mode = 2
+
+[node name="HeaderContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/EffectsMarginContainer/MarginContainer/VBoxContainer" unique_id=1631952888]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/EffectsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=485743453]
+layout_mode = 2
+text = "Effect Groups"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/EffectsMarginContainer/MarginContainer/VBoxContainer/HeaderContainer" unique_id=1777497143]
 layout_mode = 2
 size_flags_horizontal = 8
 icon = SubResource("AtlasTexture_6t4o8")
