@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 namespace CardSmithData {
@@ -69,64 +70,68 @@ namespace CardSmithData {
 
         public static void LoadArray(ref BinaryReader reader, out int[] values)
         {
-            values = 
-            foreach (int i in values)
+            values = new int[reader.ReadInt32()];
+            for (int i = 0; i < values.Length; i++)
             {
-                writer.Write(i);
+                values[i] = reader.ReadInt32();
             }
         }
 
-        public static void SaveArray(ref BinaryWriter writer, long[] values)
+        public static void LoadArray(ref BinaryReader reader, out long[] values)
         {
-            writer.Write(values.Length);
-            foreach (long i in values)
+            values = new long[reader.ReadInt32()];
+            for (int i = 0; i < values.Length; i++)
             {
-                writer.Write(i);
+                values[i] = reader.ReadInt64();
             }
         }
 
-        public static void SaveArray(ref BinaryWriter writer, float[] values)
+        public static void LoadArray(ref BinaryReader reader, out float[] values)
         {
-            writer.Write(values.Length);
-            foreach (float i in values)
+            values = new float[reader.ReadInt32()];
+            for (int i = 0; i < values.Length; i++)
             {
-                writer.Write(i);
+                values[i] = reader.ReadSingle();
             }
         }
 
-        public static void SaveArray(ref BinaryWriter writer, double[] values)
+        public static void LoadArray(ref BinaryReader reader, out double[] values)
         {
-            writer.Write(values.Length);
-            foreach (double i in values)
+            values = new double[reader.ReadInt32()];
+            for (int i = 0; i < values.Length; i++)
             {
-                writer.Write(i);
+                values[i] = reader.ReadDouble();
             }
         }
 
-        public static void SaveArray(ref BinaryWriter writer, bool[] values)
+        public static void LoadArray(ref BinaryReader reader, out bool[] values)
         {
-            writer.Write(values.Length);
-            foreach (bool i in values)
+            values = new bool[reader.ReadInt32()];
+            for (int i = 0; i < values.Length; i++)
             {
-                writer.Write(i);
+                values[i] = reader.ReadBoolean();
             }
         }
 
-        public static void SaveArray(ref BinaryWriter writer, string[] values)
+        public static void LoadArray(ref BinaryReader reader, out string[] values)
         {
-            writer.Write(values.Length);
-            foreach (string i in values)
+            values = new string[reader.ReadInt32()];
+            for (int i = 0; i < values.Length; i++)
             {
-                writer.Write(i);
+                values[i] = reader.ReadString();
             }
         }
 
-        public static void SaveArray(ref BinaryWriter writer, ISavable[] values)
+        public static void LoadArray<T>(ref BinaryReader reader, T[] values) where T : ILoadable, new()
         {
-            writer.Write(values.Length);
-            foreach (ISavable i in values)
+            T temp;
+            
+            values = new T[reader.ReadInt32()];
+            for (int i = 0; i < values.Length; i++)
             {
-                i.Save(ref writer);
+                temp = new();
+                temp.Load(ref reader);
+                values[i] = temp;
             }
         }
     }
