@@ -68,7 +68,7 @@ namespace CardSmithData {
         }
 
 
-        public static void LoadArray(ref BinaryReader reader, out int[] values)
+        public static void LoadArray(ref BinaryReader reader, int[] values)
         {
             values = new int[reader.ReadInt32()];
             for (int i = 0; i < values.Length; i++)
@@ -77,7 +77,7 @@ namespace CardSmithData {
             }
         }
 
-        public static void LoadArray(ref BinaryReader reader, out long[] values)
+        public static void LoadArray(ref BinaryReader reader, long[] values)
         {
             values = new long[reader.ReadInt32()];
             for (int i = 0; i < values.Length; i++)
@@ -86,7 +86,7 @@ namespace CardSmithData {
             }
         }
 
-        public static void LoadArray(ref BinaryReader reader, out float[] values)
+        public static void LoadArray(ref BinaryReader reader, float[] values)
         {
             values = new float[reader.ReadInt32()];
             for (int i = 0; i < values.Length; i++)
@@ -95,7 +95,7 @@ namespace CardSmithData {
             }
         }
 
-        public static void LoadArray(ref BinaryReader reader, out double[] values)
+        public static void LoadArray(ref BinaryReader reader, double[] values)
         {
             values = new double[reader.ReadInt32()];
             for (int i = 0; i < values.Length; i++)
@@ -104,7 +104,7 @@ namespace CardSmithData {
             }
         }
 
-        public static void LoadArray(ref BinaryReader reader, out bool[] values)
+        public static void LoadArray(ref BinaryReader reader, bool[] values)
         {
             values = new bool[reader.ReadInt32()];
             for (int i = 0; i < values.Length; i++)
@@ -113,7 +113,7 @@ namespace CardSmithData {
             }
         }
 
-        public static void LoadArray(ref BinaryReader reader, out string[] values)
+        public static void LoadArray(ref BinaryReader reader, string[] values)
         {
             values = new string[reader.ReadInt32()];
             for (int i = 0; i < values.Length; i++)

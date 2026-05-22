@@ -33,7 +33,17 @@ namespace CardSmithData.Cards
 
         public void Load(ref BinaryReader reader)
         {
-            
+            ID = reader.ReadInt32();
+            CardName = reader.ReadString();
+            TimeToUse = reader.ReadInt32();
+            Uses = reader.ReadInt32();
+            Description = reader.ReadString();
+
+            Utilities.LoadArray(ref reader, Schools);
+            Utilities.LoadArray(ref reader, Designators);
+            Utilities.LoadArray(ref reader, Keywords);
+            Utilities.LoadArray(ref reader, Tags);
+            Utilities.LoadArray(ref reader, EffectGroups);
         }
     }
 }
