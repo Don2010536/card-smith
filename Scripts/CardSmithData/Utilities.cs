@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace CardSmithData {
@@ -132,6 +133,30 @@ namespace CardSmithData {
                 temp = new();
                 temp.Load(ref reader);
                 values[i] = temp;
+            }
+        }
+
+        public static void SaveIDDict<T>(ref BinaryWriter writer, Dictionary<int, T> values) where T : ISavable
+        {
+            writer.Write(values.Count);
+            
+            foreach (int key in values.Keys)
+            {   
+                values[key].Save(ref writer);
+                writer.Write(key);
+            }
+        }
+
+        public static void LoadIDDict<T>(ref BinaryReader reader, Dictionary<int, T> values) where T : ILoadable, new()
+        {
+            T temp;
+            int length = reader.ReadInt32();
+            
+            for (int i = 0; i < length; i++)
+            {
+                temp = new();
+                temp.Load(ref reader);
+                values[reader.ReadInt32()] = temp;
             }
         }
     }

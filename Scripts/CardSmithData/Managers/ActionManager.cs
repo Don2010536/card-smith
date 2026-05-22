@@ -15,11 +15,6 @@ public class ActionManager : ISavable, ILoadable
         Actions[IDManager.GetID()] = action;
     }
 
-    public string GetAction(int id)
-    {
-        return Actions[id];
-    }
-
     public void Save(ref BinaryWriter writer)
     {
         writer.Write(Actions.Count);

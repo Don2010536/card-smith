@@ -104,6 +104,7 @@ Scripts/
   ISavable.cs
   Managers/
    ActionManager.cs
+   CardManager.cs
    CharacterManager.cs
    ConditionManager.cs
    DataManager.cs
