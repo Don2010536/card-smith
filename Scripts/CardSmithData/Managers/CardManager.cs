@@ -6,7 +6,7 @@ namespace CardSmithData.Managers
 {
     public class CardManager : ISavable, ILoadable
     {
-        Dictionary<int, Card> Cards = [];
+        public Dictionary<int, Card> Cards = [];
 
         public void AddCard(Card card)
         {

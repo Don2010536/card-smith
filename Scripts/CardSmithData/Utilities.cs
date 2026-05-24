@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
+using CardSmithData.Dialog;
 
 namespace CardSmithData {
     public static class Utilities
@@ -67,7 +69,6 @@ namespace CardSmithData {
                 i.Save(ref writer);
             }
         }
-
 
         public static void LoadArray(ref BinaryReader reader, int[] values)
         {

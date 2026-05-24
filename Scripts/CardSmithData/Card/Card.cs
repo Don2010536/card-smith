@@ -4,6 +4,7 @@ namespace CardSmithData.Cards
 {
     public class Card : ISavable, ILoadable
     {
+        public int ID { get; set; }
         public string CardName { get; set; }
         public int TimeToUse { get; set; }
         public int Uses { get; set; }
@@ -17,6 +18,7 @@ namespace CardSmithData.Cards
 
         public void Save(ref BinaryWriter writer)
         {
+            writer.Write(ID);
             writer.Write(CardName);
             writer.Write(TimeToUse);
             writer.Write(Uses);
