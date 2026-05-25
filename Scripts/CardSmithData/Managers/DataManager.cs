@@ -1,4 +1,5 @@
 using CardSmithData.Dialog;
+using CardSmithData.Managers;
 using GGC.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ public class DataManager
     public ConditionManager<Condition> ConditionManager { get; set; } = new();
     public TagManager<Tag> TagManager { get; set; } = new();
     public ActionManager ActionManager { get; set; } = new();
+    public CardManager CardManager { get; set; } = new();
     public BaseStats BaseStats { get; set; } = new();
 
     public void Initialize()

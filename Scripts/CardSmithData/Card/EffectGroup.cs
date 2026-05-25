@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using System.IO;
-using CardSmithData;
 
 namespace CardSmithData.Cards
 {
@@ -10,12 +8,12 @@ namespace CardSmithData.Cards
 
         public void Save(ref BinaryWriter writer)
         {
-            throw new System.NotImplementedException();
+            Utilities.SaveArray(ref writer, Effects);
         }
 
-        public void Load(ref BinaryReader writer)
+        public void Load(ref BinaryReader reader)
         {
-            throw new System.NotImplementedException();
+            Utilities.LoadArray(ref reader, Effects);
         }
     }
 }
