@@ -1,40 +1,42 @@
-using GGC.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CardSmithData;
 
-public class ActionManager : ISavable, ILoadable
-{
-    public Dictionary<int, string> Actions { get; private set; } = [];
-
-    public void AddAction(string action)
+namespace CardSmithData.Managers {
+    public class ActionManager : ISavable, ILoadable
     {
-        Actions[IDManager.GetID()] = action;
-    }
+        public Dictionary<int, string> Actions { get; private set; } = [];
 
-    public void Save(ref BinaryWriter writer)
-    {
-        writer.Write(Actions.Count);
-
-        foreach (int key in Actions.Keys)
+        public void AddAction(string action)
         {
-            writer.Write(key);
-            writer.Write(Actions[key]);
+            Actions[IDManager.GetID()] = action;
         }
-    }
 
-    public void Load(ref BinaryReader reader)
-    {
-        int count = reader.ReadInt32();
-        int key;
-
-        for (int i = 0; i < count; i++)
+        public void Save(ref BinaryWriter writer)
         {
-            key = reader.ReadInt32();
-            Actions.Add(key, reader.ReadString());
+            writer.Write(Actions.Count);
+
+            foreach (int key in Actions.Keys)
+            {
+                writer.Write(key);
+                writer.Write(Actions[key]);
+            }
+        }
+
+        public void Load(ref BinaryReader reader)
+        {
+            int count = reader.ReadInt32();
+            int key;
+
+            for (int i = 0; i < count; i++)
+            {
+                key = reader.ReadInt32();
+                Actions.Add(key, reader.ReadString());
+            }
         }
     }
 }

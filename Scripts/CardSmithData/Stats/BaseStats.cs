@@ -1,30 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-public class BaseStats : Stats, ICopy<Stats>
-{
-    public Stats Copy()
+namespace CardSmithData {
+    public class BaseStats : Stats, ICopy<Stats>
     {
-        Stats toReturn = new Stats();
-
-        foreach (string key in IntegerStats.Keys)
+        public Stats Copy()
         {
-            toReturn.IntegerStats[key] = IntegerStats[key];
-        }
+            Stats toReturn = new ();
 
-        foreach (string key in StringStats.Keys)
-        {
-            toReturn.StringStats[key] = StringStats[key];
-        }
+            foreach (string key in IntegerStats.Keys)
+            {
+                toReturn.IntegerStats[key] = IntegerStats[key];
+            }
 
-        foreach (string key in BooleanStats.Keys)
-        {
-            toReturn.BooleanStats[key] = BooleanStats[key];
-        }
+            foreach (string key in StringStats.Keys)
+            {
+                toReturn.StringStats[key] = StringStats[key];
+            }
 
-        return toReturn;
+            foreach (string key in BooleanStats.Keys)
+            {
+                toReturn.BooleanStats[key] = BooleanStats[key];
+            }
+
+            return toReturn;
+        }
     }
 }
