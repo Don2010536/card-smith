@@ -1,5 +1,6 @@
 using CardSmith.Scripts.DialogNodes.Nodes;
 using CardSmithData.Dialog;
+using CardSmithData.Managers;
 using Godot;
 using System;
 using System.IO;

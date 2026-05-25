@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using CardSmithData.Managers;
 
 namespace CardSmithData {
     public class Stats : ISavable, ILoadable

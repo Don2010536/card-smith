@@ -1,3 +1,5 @@
+using CardSmithData.Character;
+using CardSmithData.Managers;
 using Godot;
 using System;
 using System.Collections.Generic;

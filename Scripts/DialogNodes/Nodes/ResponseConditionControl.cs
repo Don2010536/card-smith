@@ -1,10 +1,9 @@
 using CardSmithData.Dialog;
+using CardSmithData.Managers;
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
-using System.Reflection;
 
 public partial class ResponseConditionControl : MarginContainer, IDialogNode
 {

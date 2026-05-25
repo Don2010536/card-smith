@@ -121,6 +121,7 @@ namespace CardSmithData.Managers {
             SaveConditions();
             SaveBaseStats();
             SaveActions();
+            SaveCards();
             SaveTags();
         }
 
@@ -156,6 +157,12 @@ namespace CardSmithData.Managers {
         public void SaveBaseStats()
         {
             Save($"{ProjectDir}/{DefaultsDir}/{BaseStatsFile}", BaseStats);
+            SaveIDs();
+        }
+
+        public void SaveCards()
+        {
+            Save($"{ProjectDir}/{DataDir}/{CardsFile}", CardManager);
             SaveIDs();
         }
 

@@ -1,3 +1,4 @@
+using CardSmithData.Character;
 using CardSmithData.Dialog.Responses;
 using System;
 using System.Collections.Generic;

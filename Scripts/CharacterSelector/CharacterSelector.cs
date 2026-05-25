@@ -1,3 +1,4 @@
+using CardSmithData.Managers;
 using Godot;
 
 public partial class CharacterSelector : Control

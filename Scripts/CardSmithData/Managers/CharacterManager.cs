@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using CardSmithData.Character;
 
 namespace CardSmithData.Managers {
     public class CharacterManager : ISavable, ILoadable
@@ -41,11 +42,11 @@ namespace CardSmithData.Managers {
         public void Load(ref BinaryReader reader)
         {
             int len = reader.ReadInt32();
-            Character character;
+            Character.Character character;
 
             for (int i = 0; i < len; i++)
             {
-                character = new Character();
+                character = new ();
                 character.Load(ref reader);
 
                 Characters.Add(character.Id, character);

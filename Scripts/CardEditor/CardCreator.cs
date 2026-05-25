@@ -51,6 +51,8 @@ public partial class CardCreator : Control
             card.ID = ID;
             DataManager.Instance.CardManager.Cards[card.ID] = card;
         }
+
+        DataManager.Instance.SaveCards();
     }
 
     public void Load()
